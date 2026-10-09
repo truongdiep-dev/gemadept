@@ -363,3 +363,5 @@ h1,h2,h3,.gold-line,.home-nav .gold-button,.section-cta,.detail-button,
 @media(max-width:600px){.golf-program-page .golf-landscape-wrap .landscape{height:340px;object-fit:cover;object-position:center}.golf-program-page .golf-contact{top:18px;font-size:13px}}
 
 @media(min-width:1100px){.letter-page{display:block}.letter-page .page-intro{position:relative;top:auto;min-height:0;padding-top:clamp(55px,7vh,90px)}.letter-page .letter-content{width:min(100% - 80px,760px);margin:0 auto;padding:clamp(30px,4vw,55px) 0 30px}}
+
+@media(min-width:1100px){.agenda-page{display:block}.agenda-page .page-intro{position:relative;top:auto;min-height:0;padding-top:clamp(55px,7vh,90px)}.agenda-page .agenda-content{width:min(100% - 80px,760px);margin:0 auto;padding:clamp(30px,4vw,55px) 0 30px}}
