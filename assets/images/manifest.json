@@ -1,0 +1,139 @@
+[
+  {
+    "file": "gemadept-logo.webp",
+    "source": "GMD-thumoionl-02.jpg",
+    "cropAt1440px": [
+      488,
+      248,
+      960,
+      445
+    ],
+    "transparent": true
+  },
+  {
+    "file": "anniversary-36.webp",
+    "source": "GMD-thumoionl-02.jpg",
+    "cropAt1440px": [
+      493,
+      488,
+      952,
+      872
+    ],
+    "transparent": true
+  },
+  {
+    "file": "title-thu-ngo.webp",
+    "source": "GMD-thumoionl-03.jpg",
+    "cropAt1440px": [
+      563,
+      221,
+      880,
+      400
+    ],
+    "transparent": true
+  },
+  {
+    "file": "title-welcome.webp",
+    "source": "GMD-thumoionl-03.jpg",
+    "cropAt1440px": [
+      466,
+      1392,
+      1016,
+      1552
+    ],
+    "transparent": true
+  },
+  {
+    "file": "title-agenda.webp",
+    "source": "GMD-thumoionl-04.jpg",
+    "cropAt1440px": [
+      568,
+      272,
+      872,
+      419
+    ],
+    "transparent": true
+  },
+  {
+    "file": "title-program.webp",
+    "source": "GMD-thumoionl-04.jpg",
+    "cropAt1440px": [
+      520,
+      1046,
+      917,
+      1182
+    ],
+    "transparent": true
+  },
+  {
+    "file": "title-activities.webp",
+    "source": "GMD-thumoionl-06.jpg",
+    "cropAt1440px": [
+      560,
+      72,
+      883,
+      211
+    ],
+    "transparent": true
+  },
+  {
+    "file": "event-party.webp",
+    "source": "GMD-thumoionl-06.jpg",
+    "cropAt1440px": [
+      358,
+      310,
+      1064,
+      707
+    ],
+    "transparent": true
+  },
+  {
+    "file": "event-golf.webp",
+    "source": "GMD-thumoionl-06.jpg",
+    "cropAt1440px": [
+      379,
+      923,
+      1075,
+      1320
+    ],
+    "transparent": true
+  },
+  {
+    "file": "golf-header.webp",
+    "source": "GMD-thumoionl-05.jpg",
+    "cropAt1440px": [
+      0,
+      0,
+      1440,
+      405
+    ],
+    "transparent": false
+  },
+  {
+    "file": "golf-landscape.webp",
+    "source": "GMD-thumoionl-05.jpg",
+    "cropAt1440px": [
+      0,
+      1744,
+      1440,
+      2700
+    ],
+    "transparent": false
+  },
+  {
+    "file": "ocean.webp",
+    "source": "GMD-thumoionl-04.jpg",
+    "cropAt1440px": [
+      0,
+      2013,
+      1440,
+      2700
+    ],
+    "transparent": false
+  },
+  {
+    "file": "home-background.webp",
+    "source": "GMD-thumoionl-02.jpg",
+    "method": "Original lower artwork from y=1480; upper text removed using edge colour per row."
+  }
+]

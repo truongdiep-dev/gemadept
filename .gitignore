@@ -1,0 +1,9 @@
+node_modules/
+.env
+source/
+outputs/
+__pycache__/
+*.log
+google-apps-script/INSTALL.gs
+dist/
+GEMADEPT-website.zip
