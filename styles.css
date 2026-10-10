@@ -1,5 +1,10 @@
-@font-face{font-family:Myriad Pro;src:url('assets/fonts/MyriadPro-Regular.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
-:root{--blue:#0d76f5;--navy:#061cc5;--gold:#ffdc79;--white:#fff;--ink:#073294;color-scheme:light;font-family:Myriad Pro,Arial,sans-serif;background:#06164b;color:var(--white)}
+@font-face{font-family:Gotham;src:url('assets/fonts/SVN-Gotham-Regular.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:Gotham;src:url('assets/fonts/SVN-Gotham-Italic.otf') format('opentype');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:Gotham;src:url('assets/fonts/SVN-Gotham-Bold.otf') format('opentype');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:Gotham;src:url('assets/fonts/SVN-Gotham-Bold-Italic.otf') format('opentype');font-weight:700;font-style:italic;font-display:swap}
+@font-face{font-family:Gotham;src:url('assets/fonts/SVN-Gotham-Black.otf') format('opentype');font-weight:900;font-style:normal;font-display:swap}
+@font-face{font-family:Gotham;src:url('assets/fonts/SVN-Gotham-Black-Italic.otf') format('opentype');font-weight:900;font-style:italic;font-display:swap}
+:root{--blue:#0d76f5;--navy:#061cc5;--gold:#ffdc79;--white:#fff;--ink:#073294;color-scheme:light;font-family:Gotham,Arial,sans-serif;background:#06164b;color:var(--white)}
 *{box-sizing:border-box}body{margin:0}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button,a,input,select,textarea{-webkit-tap-highlight-color:transparent}button,a{touch-action:manipulation}button{cursor:pointer}img{display:block;max-width:100%;height:auto}h1,h2,h3,p{margin:0}button:disabled{cursor:wait;opacity:.7}a:focus-visible,button:focus-visible{outline:3px solid #fff;outline-offset:5px}input:focus,select:focus,textarea:focus{outline:3px solid #ffdc79;outline-offset:3px}[hidden]{display:none!important}.invitation{max-width:720px;margin:0 auto;container-type:inline-size;outline:none;box-shadow:0 0 90px #00103680}.page{position:relative;overflow:hidden;min-height:972px;min-height:max(100dvh,135cqw);background:linear-gradient(180deg,#071fc3 0%,#0d73f3 33%,#0f75f4 68%,#0823c9 100%);padding:1px 0 60px}.gold-text{color:var(--gold);font-weight:700;text-shadow:none}.gold-button{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:48px;padding:8px 19px;border-radius:999px;border:2px solid #ffeac0;background:linear-gradient(180deg,#fffebc 0%,#ffe867 32%,#ffce60 55%,#ffd899 91%);box-shadow:inset 0 2px 2px #fff9,0 2px 0 #cf8425,0 3px 6px #00267566;color:#082b8e;font-size:14px;font-weight:700;line-height:1.05;text-align:center;transition:filter .18s,transform .18s}.gold-button small{display:block;margin-top:2px;font-size:9px;font-weight:400;line-height:1.15}.gold-button:hover{filter:brightness(1.08);transform:translateY(-1px)}.back-link{position:absolute;top:10px;left:15px;z-index:2;min-height:44px;display:flex;align-items:center;font-size:14px;padding:0 8px;color:#fff}.back-link:hover{text-decoration:underline}.back-link.on-white{color:#073294;text-shadow:0 1px #fff}.brand{width:22%;min-width:120px;margin:38px auto 24px}.art-title img{margin:auto;width:24%;min-width:150px}.section-cta{width:max-content;max-width:90%;min-width:215px;margin:32px auto 0}.subtitle{text-align:center;font-size:clamp(12px,2.15cqw,16px);font-weight:700;letter-spacing:.035em}.text-link{display:block;width:fit-content;max-width:90%;margin:24px auto 0;min-height:44px;line-height:1.4;text-align:center;padding:10px 4px;font-size:15px;text-decoration:underline;text-underline-offset:4px}.skip-link{position:fixed;left:12px;top:-100px;z-index:100;padding:12px;background:#fff;color:#0634a2}.skip-link:focus{top:12px}.noscript{padding:20px;text-align:center}
 /* Original 1440 x 2700 composition, with live HTML typography and navigation. */
 .home-page{aspect-ratio:1440/2700;min-height:0;padding:0;background:#0a22c3 url('assets/images/home-background.webp') center/100% 100% no-repeat}.home-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2.8%;padding:5.2% 5.3% 0}.home-nav .gold-button{border-radius:14px;padding:7px 4px;font-size:clamp(10px,1.9cqw,15px);min-height:46px}.home-nav small{font-size:clamp(6.5px,1.2cqw,10px)}.home-brand{width:32.8%;margin:6.2% auto 0}.home-anniversary{width:31.9%;margin:3.8% auto 0}.home-heading{text-align:center;margin-top:4.5%}.home-eyebrow{font-size:clamp(10px,2.05cqw,16px);font-weight:700;letter-spacing:.012em;color:#fff5cb}.home-heading h1{font-size:clamp(25px,6cqw,44px);line-height:1.25;margin-top:2%;letter-spacing:.01em}.home-location{margin-top:5%;font-size:clamp(12px,2.55cqw,20px);line-height:1.25}.home-location em{display:block;font-size:.88em;font-weight:400;margin-top:3px}.home-date{font-size:clamp(12px,2.55cqw,20px);font-weight:700;margin-top:3%}
@@ -11,7 +16,7 @@
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
 
 /* Apply the gold split to each text line so font size and line height cannot shift it. */
-.gold-line{display:block;width:max-content;max-width:100%;margin-inline:auto}
+.gold-line{display:block;width:max-content;max-width:100%;margin-inline:auto;padding-bottom:.22em}
 @supports (background-clip:text) or (-webkit-background-clip:text){
   .gold-text,.gold-line{
     background-image:linear-gradient(180deg,#fff0b7 0%,#ffe7a4 49%,#e4a64f 50%,#efbd68 100%);
@@ -28,7 +33,7 @@
   .gold-text,.gold-line{background:none;color:CanvasText;-webkit-text-fill-color:CanvasText}
 }
 /* Stronger two-tone display headings. */
-.gold-text{font-family:"Myriad Pro",Arial,sans-serif;font-weight:900;font-synthesis:weight;-webkit-text-stroke:0;text-shadow:none}.gold-line{-webkit-text-stroke:0;text-shadow:none}h1:focus:not(:focus-visible),h2:focus:not(:focus-visible){outline:none}
+.gold-text{font-family:Gotham,Arial,sans-serif;font-weight:900;font-synthesis:weight;-webkit-text-stroke:0;text-shadow:none}.gold-line{-webkit-text-stroke:0;text-shadow:none}h1:focus:not(:focus-visible),h2:focus:not(:focus-visible){outline:none}
 .home-heading h1{font-size:clamp(28px,6.6cqw,49px)}
 .horizon{font-size:clamp(25px,5.15cqw,40px)}
 .event-title{font-size:clamp(25px,4.55cqw,35px)}
@@ -275,7 +280,7 @@ body{padding-inline:env(safe-area-inset-left,0px) env(safe-area-inset-right,0px)
   .success-page .text-link{margin:18px auto 0;text-align:center}
 }
 
-/* Thicken the rendered Myriad Pro glyphs while preserving each pixel of the two-tone gradient. */
+/* Thicken the rendered Gotham glyphs while preserving each pixel of the two-tone gradient. */
 .gold-filter-defs{position:absolute;width:0;height:0;overflow:hidden;pointer-events:none}
 .gold-line,.gold-text:not(:has(.gold-line)){filter:url(#gold-embolden)}
 

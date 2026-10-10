@@ -1,6 +1,6 @@
 # GEMADEPT 2026 — Website thư mời
 
-Dự án HTML, CSS, JavaScript thuần. Máy chủ Node.js dùng thư viện có sẵn, không cần npm install. Font Myriad Pro được nhúng từ file người dùng cung cấp. Các ảnh WebP được tách từ JPG thiết kế, không lấy ảnh bên ngoài.
+Dự án HTML, CSS, JavaScript thuần. Máy chủ Node.js dùng thư viện có sẵn, không cần npm install. Font SVN-Gotham được nhúng từ file người dùng cung cấp. Các ảnh WebP được tách từ JPG thiết kế, không lấy ảnh bên ngoài.
 
 ## Chạy dự án
 
@@ -38,7 +38,7 @@ Apps Script đã được triển khai. Máy chủ cục bộ lấy URL `/exec` 
 - `api/register.mjs`: Vercel Function nhận đăng ký khi website chạy trên Vercel.
 - `scripts/build-vercel.mjs` và `vercel.json`: xuất bản file giao diện, ảnh và font trên Vercel.
 - `assets/images`: hình tách từ thiết kế; `manifest.json` ghi nguồn và tọa độ cắt.
-- `assets/fonts`: font Myriad Pro Regular.
+- `assets/fonts`: các kiểu chữ SVN-Gotham Regular, Italic, Bold và Black.
 - `google-apps-script/Code.gs`: bộ nhận dữ liệu cho Google Sheets.
 - `google-apps-script/INSTALL.gs`: bản cài đặt riêng ở máy hiện tại, đã điền cấu hình; không commit hoặc chia sẻ công khai.
 - `.env.example`: cấu hình mẫu; `.env` chứa cấu hình riêng của máy chủ.
