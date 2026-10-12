@@ -30,7 +30,7 @@
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
 
 /* Apply a soft gold transition to each text line. */
-.gold-line{display:block;width:max-content;max-width:100%;margin-inline:auto;padding-top:.16em;padding-bottom:.22em}
+.gold-line{display:block;width:max-content;max-width:100%;margin-inline:auto;padding-top:.25em;padding-bottom:.22em}
 @supports (background-clip:text) or (-webkit-background-clip:text){
   .gold-text,.gold-line{
     background-image:linear-gradient(180deg,#ffe9a9 0%,#ffdd8b 38%,#f7ca70 66%,#edb45d 100%);
@@ -47,7 +47,7 @@
   .gold-text,.gold-line{background:none;color:CanvasText;-webkit-text-fill-color:CanvasText}
 }
 /* Stronger two-tone display headings. */
-.gold-text{font-family:Gotham,Arial,sans-serif;font-weight:900;font-synthesis:weight;-webkit-text-stroke:0;text-shadow:none}.gold-text:not(:has(.gold-line)){padding-top:.16em;padding-bottom:.12em}.gold-line{-webkit-text-stroke:0;text-shadow:none}h1:focus:not(:focus-visible),h2:focus:not(:focus-visible){outline:none}
+.gold-text{font-family:Gotham,Arial,sans-serif;font-weight:900;font-synthesis:weight;-webkit-text-stroke:0;text-shadow:none}.gold-text:not(:has(.gold-line)){padding-top:.25em;padding-bottom:.12em}.gold-line{-webkit-text-stroke:0;text-shadow:none}h1:focus:not(:focus-visible),h2:focus:not(:focus-visible){outline:none}
 .home-heading h1{font-size:clamp(28px,6.6cqw,49px)}
 .horizon{font-size:clamp(25px,5.15cqw,40px)}
 .event-title{font-size:clamp(25px,4.55cqw,35px)}
@@ -413,9 +413,9 @@ h1,h2,h3,.gold-line,.home-nav .gold-button,.section-cta,.detail-button,
 .activities-branding img:last-child{width:clamp(145px,19cqw,260px)}
 .activities-page h1{display:flex;flex-direction:column;align-items:center;grid-column:auto;margin:0 0 clamp(30px,3.4cqw,50px);font-size:clamp(25px,4.15cqw,58px);line-height:1.08}
 .activities-script{width:clamp(175px,23cqw,325px);min-width:0;margin:0 auto clamp(5px,.8cqw,12px)}
-.activity-headline{display:flex;flex-wrap:wrap;justify-content:center;column-gap:.24em;row-gap:0;max-width:100%;font-size:inherit;line-height:1.05}
+.activity-headline{display:flex;flex-wrap:wrap;justify-content:center;column-gap:.45em;row-gap:.08em;max-width:100%;font-size:inherit;line-height:1.2}
 .activities-page .activity-headline{font-weight:700;filter:none}
-.activities-page .activity-headline .gold-line{padding-bottom:.12em;font-weight:700;filter:none;background-image:linear-gradient(180deg,#f6d17c 0%,#fff1b8 18%,#ffe8a0 31%,#e4a351 44%,#f9d47a 70%,#edb45c 100%)}
+.activities-page .activity-headline .gold-line{padding-top:.32em;padding-bottom:.2em;font-weight:700;line-height:1.2;filter:none;background-image:linear-gradient(180deg,#f6d17c 0%,#fff1b8 18%,#ffe8a0 31%,#e4a351 44%,#f9d47a 70%,#edb45c 100%)}
 @media(forced-colors:active){.activities-page .activity-headline .gold-line{background:none}}
 .activities-english{display:block;margin-top:0;color:#fff;font-size:clamp(15px,2.2cqw,31px);font-weight:700;line-height:1.15}
 .activities-page .activity,.activities-page .activity+.activity{display:flex;flex-direction:column;align-items:center;width:min(100%,760px);max-width:760px;margin:0 auto;gap:0;font-size:clamp(16px,1.6cqw,23px)}
