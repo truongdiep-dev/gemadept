@@ -8,7 +8,31 @@ let receipt = readSession('gemadept-receipt');
 let submitting = false;
 const saveDraft = () => { try { sessionStorage.setItem(storageKey, JSON.stringify(draft)); } catch {} };
 const formData = form => Object.fromEntries([...new FormData(form)].map(([key, val]) => [key, String(val).trim()]));
-const titles = {'trang-chu':'Tiệc tri ân khách hàng 2026','thu-ngo':'Thư ngỏ','lich-trinh':'Lịch trình sự kiện','su-kien':'Xác nhận tham gia','tiec-tri-an':'Partner Appreciation Party 2026','golf':'Golf Tournament 2026','chuong-trinh-golf':'Chương trình Golf Tournament','dang-ky-tiec/1':'Thông tin khách mời','dang-ky-tiec/2':'Thông tin vé máy bay','dang-ky-tiec/3':'Thông tin khách sạn','dang-ky-golf':'Đăng ký đánh golf','thanh-cong':'Đăng ký thành công'};
+const titles = {'trang-chu':'Tiệc tri ân khách hàng 2026','thu-ngo':'Thư ngỏ','lich-trinh':'Lịch trình sự kiện','su-kien':'Xác nhận tham gia','tiec-tri-an':'Partner Appreciation Party 2026','golf':'Golf Tournament 2026','chuong-trinh-golf':'Chương trình Golf Tournament','dang-ky-tiec/1':'Thông tin khách mời','dang-ky-tiec/2':'Thông tin vé máy bay','dang-ky-tiec/3':'Thông tin khách sạn','dang-ky-golf':'Đăng ký đánh golf','thanh-cong':'Đăng ký thành công','thanh-cong-golf':'Đăng ký đánh golf thành công'};
+const homePath = '/trang-chu';
+const attendancePath = `${homePath}/xac-nhan-tham-gia`;
+const partyPath = `${attendancePath}/partner-appreciation-party-2026`;
+const golfPath = `${attendancePath}/golf-tournament-2026`;
+const pagePaths = {
+  'trang-chu':homePath,
+  'thu-ngo':`${homePath}/thu-ngo`,
+  'lich-trinh':`${homePath}/lich-trinh-su-kien`,
+  'su-kien':attendancePath,
+  'tiec-tri-an':partyPath,
+  'dang-ky-tiec/1':`${partyPath}/xac-nhan-tham-gia/1`,
+  'dang-ky-tiec/2':`${partyPath}/xac-nhan-tham-gia/2`,
+  'dang-ky-tiec/3':`${partyPath}/xac-nhan-tham-gia/3`,
+  'golf':golfPath,
+  'chuong-trinh-golf':`${golfPath}/chuong-trinh-golf`,
+  'dang-ky-golf':`${partyPath}/xac-nhan-tham-gia`,
+  'thanh-cong':`${partyPath}/xac-nhan-tham-gia/1/thanh-cong`,
+  'thanh-cong-golf':`${partyPath}/xac-nhan-tham-gia/thanh-cong`
+};
+const pathPages = Object.fromEntries(Object.entries(pagePaths).map(([page,url]) => [url,page]));
+function navigate(page) {
+  history.pushState(null, '', pagePaths[page]);
+  route(true);
+}
 for (const select of document.querySelectorAll('[data-time-slots]')) {
   for (let hour = 0; hour < 24; hour++) {
     const start = `${String(hour).padStart(2,'0')}:00`;
@@ -28,18 +52,18 @@ for (const form of forms) {
   form.addEventListener('change', () => { draft[form.dataset.step] = formData(form); saveDraft(); });
 }
 function validGuest() { return ['company','name','position'].every(key => draft.guest?.[key]?.trim()); }
-function showReceipt() {
-  document.getElementById('receipt').textContent = receipt.id ? `Mã đăng ký: ${receipt.id}` : '';
-}
 function route(shouldFocus = false) {
-  let target = location.hash.slice(1) || location.pathname.replace(/^\/+|\/+$/g, '') || 'trang-chu';
+  const legacy = location.hash.slice(1);
+  const path = decodeURI(location.pathname).replace(/\/$/, '');
+  const legacyPath = path.slice(1);
+  let target = titles[legacy] ? legacy : pathPages[path] || (titles[legacyPath] ? legacyPath : 'trang-chu');
   if (!titles[target]) target = 'trang-chu';
   if (/^dang-ky-tiec\/[23]$/.test(target) && !validGuest()) target = 'dang-ky-tiec/1';
-  if (target === 'thanh-cong' && !receipt.id) target = 'trang-chu';
-  if (location.pathname !== '/' || location.hash !== `#${target}`) history.replaceState(null, '', `/${location.search}#${target}`);
+  if (target === 'thanh-cong' && (!receipt.id || receipt.event !== 'party')) target = 'trang-chu';
+  if (target === 'thanh-cong-golf' && (!receipt.id || receipt.event !== 'golf')) target = 'trang-chu';
+  if (location.pathname !== pagePaths[target] || location.hash) history.replaceState(null, '', `${pagePaths[target]}${location.search}`);
   for (const page of pages) page.hidden = page.dataset.page !== target;
   document.title = `${titles[target]} | Gemadept`;
-  if (target === 'thanh-cong') showReceipt();
   window.scrollTo(0,0);
   if (shouldFocus) document.getElementById('main').focus({preventScroll:true});
 }
@@ -64,7 +88,7 @@ function validateDates(form, first, second, message, paired = false) {
 }
 async function submitRegistration(form, event) {
   if (submitting) return;
-  if (event === 'party' && !validGuest()) { location.hash = 'dang-ky-tiec/1'; return; }
+  if (event === 'party' && !validGuest()) { navigate('dang-ky-tiec/1'); return; }
   const error = form.querySelector('.form-error');
   const button = form.querySelector('[type=submit]');
   const label = button.textContent;
@@ -86,7 +110,7 @@ async function submitRegistration(form, event) {
     if (event === 'party') { for (const step of ['guest','flight','hotel']) { delete draft[step]; document.querySelector(`[data-step="${step}"]`).reset(); } }
     else { delete draft.golf; form.reset(); }
     delete draft[idKey]; saveDraft();
-    location.hash = 'thanh-cong';
+    navigate(event === 'golf' ? 'thanh-cong-golf' : 'thanh-cong');
   } catch (err) {
     error.textContent = err.name === 'AbortError' ? 'Kết nối mất nhiều thời gian. Vui lòng thử gửi lại; hệ thống sẽ tránh ghi trùng đăng ký.' : (err.message || 'Mất kết nối. Vui lòng kiểm tra mạng và thử lại.');
     error.hidden = false; error.scrollIntoView({block:'center',behavior:'smooth'});
@@ -97,17 +121,43 @@ for (const form of forms) form.addEventListener('submit', event => {
   for (const field of form.querySelectorAll('input[required]')) {
     field.setCustomValidity(field.value.trim() ? '' : 'Vui lòng nhập thông tin này.');
   }
+  const phone = form.querySelector('input[name="phone"]');
+  if (phone?.value.trim()) {
+    const value = phone.value.trim();
+    phone.setCustomValidity(/^[+0-9() .-]{8,25}$/.test(value) && value.replace(/\D/g, '').length >= 8 ? '' : 'Vui lòng nhập số điện thoại hợp lệ.');
+  }
   if (!form.reportValidity()) return;
   draft[form.dataset.step] = formData(form); saveDraft();
   switch (form.dataset.step) {
-    case 'guest': location.hash = 'dang-ky-tiec/2'; break;
-    case 'flight': if (validateDates(form,'departureDate','returnDate','Ngày về phải bằng hoặc sau ngày đi.')) location.hash = 'dang-ky-tiec/3'; break;
+    case 'guest': navigate('dang-ky-tiec/2'); break;
+    case 'flight': if (validateDates(form,'departureDate','returnDate','Ngày về phải bằng hoặc sau ngày đi.')) navigate('dang-ky-tiec/3'); break;
     case 'hotel': if (validateDates(form,'checkIn','checkOut','Ngày trả phòng phải bằng hoặc sau ngày nhận phòng.',true)) submitRegistration(form,'party'); break;
     case 'golf': submitRegistration(form,'golf'); break;
   }
 });
 
 const customSelects = [];
+function setBilingualText(element, value) {
+  const separator = value.indexOf(' / ');
+  if (separator < 0) { element.textContent = value; return; }
+  const copy = document.createElement('span');
+  const english = document.createElement('span');
+  english.lang = 'en';
+  english.textContent = value.slice(separator + 3);
+  copy.append(document.createTextNode(value.slice(0, separator + 3)), english);
+  element.replaceChildren(copy);
+}
+for (const input of document.querySelectorAll('.registration-form input[placeholder]')) {
+  if (!input.placeholder.includes(' / ')) continue;
+  const wrapper = document.createElement('span');
+  wrapper.className = 'bilingual-input';
+  const placeholder = document.createElement('span');
+  placeholder.className = 'bilingual-placeholder';
+  placeholder.setAttribute('aria-hidden', 'true');
+  setBilingualText(placeholder, input.placeholder);
+  input.replaceWith(wrapper);
+  wrapper.append(input, placeholder);
+}
 for (const select of document.querySelectorAll('.registration-form select')) {
   const originalLabel = select.closest('label');
   if (!originalLabel) continue;
@@ -120,7 +170,7 @@ for (const select of document.querySelectorAll('.registration-form select')) {
   const fieldLabel = document.createElement('span');
   fieldLabel.className = 'select-label';
   fieldLabel.id = 'select-label-' + index;
-  fieldLabel.textContent = caption;
+  fieldLabel.append(...[...originalLabel.childNodes].filter(node => node !== select).map(node => node.cloneNode(true)));
   const trigger = document.createElement('button');
   trigger.type = 'button';
   trigger.className = 'select-trigger';
@@ -142,12 +192,12 @@ for (const select of document.querySelectorAll('.registration-form select')) {
     item.setAttribute('role', 'option');
     item.id = 'select-option-' + index + '-' + optionIndex;
     item.dataset.value = option.value;
-    item.textContent = option.textContent;
+    setBilingualText(item, option.textContent);
     menu.append(item);
     return item;
   });
   const refresh = () => {
-    trigger.textContent = select.selectedOptions[0]?.textContent || select.options[0]?.textContent || '';
+    setBilingualText(trigger, select.selectedOptions[0]?.textContent || select.options[0]?.textContent || '');
     items.forEach((item, itemIndex) =>
       item.setAttribute('aria-selected', String(itemIndex === select.selectedIndex)));
   };
@@ -238,7 +288,7 @@ for (const input of document.querySelectorAll('.registration-form input[type="da
   const fieldLabel = document.createElement('span');
   fieldLabel.className = 'date-label';
   fieldLabel.id = 'date-label-' + index;
-  fieldLabel.textContent = caption;
+  fieldLabel.append(...[...originalLabel.childNodes].filter(node => node !== input).map(node => node.cloneNode(true)));
   const trigger = document.createElement('button');
   trigger.type = 'button';
   trigger.className = 'date-trigger';
@@ -406,5 +456,15 @@ document.addEventListener('pointerdown', event => {
   });
 });
 
-window.addEventListener('hashchange',() => route(true));
+window.addEventListener('hashchange',() => { if (location.hash !== '#main') route(true); });
+window.addEventListener('popstate',() => route(true));
+for (const link of document.querySelectorAll('a[href^="/"]')) {
+  const page = pathPages[link.pathname];
+  if (!page) continue;
+  link.addEventListener('click', event => {
+    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    navigate(page);
+  });
+}
 route();

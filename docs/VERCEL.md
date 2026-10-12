@@ -16,4 +16,4 @@ Website gửi biểu mẫu tới `/api/register` cùng domain. Vercel Function k
 Lưu ý: việc lưu một lượt đăng ký thật trên bản deploy chưa được kiểm thử theo yêu cầu người dùng.
 ## Mở trực tiếp từng trang
 
-Vercel rewrite mọi URL trang chưa có file sang /index.html; các file tĩnh và Vercel Function có ưu tiên theo filesystem. Khi mở trực tiếp /thu-ngo, /lich-trinh, /su-kien, /golf hoặc các route khác, JavaScript chọn đúng trang và chuẩn hóa URL về dạng /#route. Link dạng /#thu-ngo cũng hoạt động.
+Vercel rewrite các URL trang sang `/index.html`; các file tĩnh và Vercel Function có ưu tiên theo filesystem. URL chính dùng cấu trúc phân cấp, ví dụ `/trang-chu/thu-ngo`, `/trang-chu/xac-nhan-tham-gia/golf-tournament-2026`. Các link cũ như `/#thu-ngo` vẫn được JavaScript chuyển sang URL mới.

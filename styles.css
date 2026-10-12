@@ -1,18 +1,29 @@
-@font-face{font-family:Gotham;src:url('assets/fonts/SVN-Gotham-Regular.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:Gotham;src:url('assets/fonts/SVN-Gotham-Italic.otf') format('opentype');font-weight:400;font-style:italic;font-display:swap}
-@font-face{font-family:Gotham;src:url('assets/fonts/SVN-Gotham-Bold.otf') format('opentype');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:Gotham;src:url('assets/fonts/SVN-Gotham-Book-2026.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:Gotham;src:url('assets/fonts/SVN-Gotham-Italic-2026.otf') format('opentype');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:Gotham;src:url('assets/fonts/SVN-Gotham-Bold-2026.otf') format('opentype');font-weight:700;font-style:normal;font-display:swap}
 @font-face{font-family:Gotham;src:url('assets/fonts/SVN-Gotham-Bold-Italic.otf') format('opentype');font-weight:700;font-style:italic;font-display:swap}
-@font-face{font-family:Gotham;src:url('assets/fonts/SVN-Gotham-Black.otf') format('opentype');font-weight:900;font-style:normal;font-display:swap}
+@font-face{font-family:Gotham;src:url('assets/fonts/SVN-Gotham-Black-2026.otf') format('opentype');font-weight:900;font-style:normal;font-display:swap}
 @font-face{font-family:Gotham;src:url('assets/fonts/SVN-Gotham-Black-Italic.otf') format('opentype');font-weight:900;font-style:italic;font-display:swap}
+@font-face{font-family:GothamEnglish;src:url('assets/fonts/GothamBook.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:GothamEnglish;src:url('assets/fonts/GothamBookItalic.ttf') format('truetype');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:GothamEnglish;src:url('assets/fonts/GothamBold.ttf') format('truetype');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:GothamEnglish;src:url('assets/fonts/GothamBoldItalic.ttf') format('truetype');font-weight:700;font-style:italic;font-display:swap}
+@font-face{font-family:GothamVietnameseBook;src:url('assets/fonts/SVN-Gotham-Book-2026.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
+[lang="en"]{font-family:GothamEnglish,Gotham,Arial,sans-serif}
+.registration-form .bilingual-input{display:block;position:relative;margin-top:9px}
+.registration-form .bilingual-input input{margin-top:0}
+.registration-form .bilingual-input input::placeholder{color:transparent}
+.registration-form .bilingual-placeholder{position:absolute;top:50%;left:14px;transform:translateY(-50%);color:#677b8d;font-size:14px;line-height:1.2;pointer-events:none;white-space:nowrap;max-width:calc(100% - 28px);overflow:hidden;text-overflow:ellipsis}
+.registration-form .bilingual-input input:not(:placeholder-shown)+.bilingual-placeholder{display:none}
 :root{--blue:#0d76f5;--navy:#061cc5;--gold:#ffdc79;--white:#fff;--ink:#073294;color-scheme:light;font-family:Gotham,Arial,sans-serif;background:#06164b;color:var(--white)}
 *{box-sizing:border-box}body{margin:0}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button,a,input,select,textarea{-webkit-tap-highlight-color:transparent}button,a{touch-action:manipulation}button{cursor:pointer}img{display:block;max-width:100%;height:auto}h1,h2,h3,p{margin:0}button:disabled{cursor:wait;opacity:.7}a:focus-visible,button:focus-visible{outline:3px solid #fff;outline-offset:5px}input:focus,select:focus,textarea:focus{outline:3px solid #ffdc79;outline-offset:3px}[hidden]{display:none!important}.invitation{max-width:720px;margin:0 auto;container-type:inline-size;outline:none;box-shadow:0 0 90px #00103680}.page{position:relative;overflow:hidden;min-height:972px;min-height:max(100dvh,135cqw);background:linear-gradient(180deg,#071fc3 0%,#0d73f3 33%,#0f75f4 68%,#0823c9 100%);padding:1px 0 60px}.gold-text{color:var(--gold);font-weight:700;text-shadow:none}.gold-button{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:48px;padding:8px 19px;border-radius:999px;border:2px solid #ffeac0;background:linear-gradient(180deg,#fffebc 0%,#ffe867 32%,#ffce60 55%,#ffd899 91%);box-shadow:inset 0 2px 2px #fff9,0 2px 0 #cf8425,0 3px 6px #00267566;color:#082b8e;font-size:14px;font-weight:700;line-height:1.05;text-align:center;transition:filter .18s,transform .18s}.gold-button small{display:block;margin-top:2px;font-size:9px;font-weight:400;line-height:1.15}.gold-button:hover{filter:brightness(1.08);transform:translateY(-1px)}.back-link{position:absolute;top:10px;left:15px;z-index:2;min-height:44px;display:flex;align-items:center;font-size:14px;padding:0 8px;color:#fff}.back-link:hover{text-decoration:underline}.back-link.on-white{color:#073294;text-shadow:0 1px #fff}.brand{width:22%;min-width:120px;margin:38px auto 24px}.art-title img{margin:auto;width:24%;min-width:150px}.section-cta{width:max-content;max-width:90%;min-width:215px;margin:32px auto 0}.subtitle{text-align:center;font-size:clamp(12px,2.15cqw,16px);font-weight:700;letter-spacing:.035em}.text-link{display:block;width:fit-content;max-width:90%;margin:24px auto 0;min-height:44px;line-height:1.4;text-align:center;padding:10px 4px;font-size:15px;text-decoration:underline;text-underline-offset:4px}.skip-link{position:fixed;left:12px;top:-100px;z-index:100;padding:12px;background:#fff;color:#0634a2}.skip-link:focus{top:12px}.noscript{padding:20px;text-align:center}
 /* Original 1440 x 2700 composition, with live HTML typography and navigation. */
 .home-page{aspect-ratio:1440/2700;min-height:0;padding:0;background:#0a22c3 url('assets/images/home-background.webp') center/100% 100% no-repeat}.home-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2.8%;padding:5.2% 5.3% 0}.home-nav .gold-button{border-radius:14px;padding:7px 4px;font-size:clamp(10px,1.9cqw,15px);min-height:46px}.home-nav small{font-size:clamp(6.5px,1.2cqw,10px)}.home-brand{width:32.8%;margin:6.2% auto 0}.home-anniversary{width:31.9%;margin:3.8% auto 0}.home-heading{text-align:center;margin-top:4.5%}.home-eyebrow{font-size:clamp(10px,2.05cqw,16px);font-weight:700;letter-spacing:.012em;color:#fff5cb}.home-heading h1{font-size:clamp(25px,6cqw,44px);line-height:1.25;margin-top:2%;letter-spacing:.01em}.home-location{margin-top:5%;font-size:clamp(12px,2.55cqw,20px);line-height:1.25}.home-location em{display:block;font-size:.88em;font-weight:400;margin-top:3px}.home-date{font-size:clamp(12px,2.55cqw,20px);font-weight:700;margin-top:3%}
-.ocean-page{background:linear-gradient(180deg,#071fc3,#0d76f5 35%,#0d76f5 100%);padding-bottom:36cqw}.ocean-page:after{content:'';position:absolute;z-index:0;bottom:0;left:0;width:100%;height:48cqw;background:url('assets/images/ocean.webp') bottom/100% auto no-repeat;mask-image:linear-gradient(transparent,#000 24%)}.ocean-page>*{position:relative;z-index:1}.ocean-page>.back-link{position:absolute}.letter-content{width:78%;margin:16px auto 0;font-size:clamp(15px,2.05cqw,16px);line-height:1.3}.letter-content p{margin:0 0 17px}.horizon{text-align:center;font-size:clamp(22px,4.65cqw,36px);line-height:1.2}.letter-content .horizon-subtitle{text-align:center;font-size:clamp(16px,3cqw,23px);font-weight:700;margin:3px 0 14px}.welcome-title img{width:48%;min-width:215px;margin:4px auto 10px}.english-horizon{text-align:center;font-size:19px;margin-bottom:12px}.letter-content .section-cta{margin-top:28px}.agenda-content{width:78%;margin:26px auto 0}.event-title{text-align:center;font-size:clamp(23px,4.1cqw,31px);line-height:1.12;margin:0 -5% 8px}.event-facts{font-size:clamp(14px,2.12cqw,16px);line-height:1.3;margin:30px 0}.event-facts>div{display:grid;grid-template-columns:28% 72%}.event-facts>div+div{border-top:1px solid #fff8}.event-facts dt{padding:12px 14px 12px 0;font-weight:700}.event-facts dd{margin:0;padding:12px 0 12px 20px;border-left:1px solid #fff8}.event-facts em{display:block;font-weight:400;margin-top:3px}.honor{text-align:center;margin:30px -5% 32px;font-size:clamp(13px,2.25cqw,17px)}.honor em{display:block;font-size:.85em;margin-top:4px}.program-title img{width:38%;min-width:180px}.program-english{text-align:center;font-style:italic;margin:4px 0 24px;font-size:18px}.schedule{font-size:16px;line-height:1.25}.schedule-row{display:grid;grid-template-columns:29% 71%;gap:0;margin-bottom:22px}.schedule-row time{font-weight:700;padding-top:1px}.schedule-row p{position:relative;padding-left:21px;margin-bottom:15px}.schedule-row p:before{content:'•';position:absolute;left:0}.schedule-row em{display:block;color:#f1f7ff}.contact{text-align:center;font-size:clamp(13px,2.05cqw,16px);line-height:1.3;margin:32px -3% 0}.contact em{display:block}.contact a:hover{text-decoration:underline}
+.ocean-page{background:linear-gradient(180deg,#071fc3,#0d76f5 35%,#0d76f5 100%);padding-bottom:36cqw}.ocean-page:after{content:'';position:absolute;z-index:0;bottom:0;left:0;width:100%;height:48cqw;background:url('assets/images/home-background.webp') center bottom/100% auto no-repeat;mask-image:linear-gradient(transparent,#000 24%)}.ocean-page>*{position:relative;z-index:1}.ocean-page>.back-link{position:absolute}.letter-content{width:78%;margin:16px auto 0;font-size:clamp(15px,2.05cqw,16px);line-height:1.3}.letter-content p{margin:0 0 17px}.horizon{text-align:center;font-size:clamp(22px,4.65cqw,36px);line-height:1.2}.letter-content .horizon-subtitle{text-align:center;font-size:clamp(16px,3cqw,23px);font-weight:700;margin:3px 0 14px}.welcome-title img{width:46.5cqw;min-width:291px;margin:4px auto 10px}.english-horizon{text-align:center;font-size:19px;margin-bottom:12px}.letter-content .section-cta{margin-top:28px}.agenda-content{width:78%;margin:26px auto 0}.event-title{text-align:center;font-size:clamp(23px,4.1cqw,31px);line-height:1.12;margin:0 -5% 8px}.event-facts{font-size:clamp(14px,2.12cqw,16px);line-height:1.3;margin:30px 0}.event-facts>div{display:grid;grid-template-columns:28% 72%}.event-facts>div+div{border-top:1px solid #fff8}.event-facts dt{padding:12px 14px 12px 0;font-weight:700}.event-facts dd{margin:0;padding:12px 0 12px 20px;border-left:1px solid #fff8}.event-facts em{display:block;font-weight:400;margin-top:3px}.honor{text-align:center;margin:30px -5% 32px;font-size:clamp(13px,2.25cqw,17px)}.honor em{display:block;font-size:.85em;margin-top:4px}.program-title img{width:38%;min-width:180px}.program-english{text-align:center;font-style:italic;margin:4px 0 24px;font-size:18px}.schedule{font-size:16px;line-height:1.25}.schedule-row{display:grid;grid-template-columns:29% 71%;gap:0;margin-bottom:22px}.schedule-row time{font-weight:700;padding-top:1px}.schedule-row p{position:relative;padding-left:21px;margin-bottom:15px}.schedule-row p:before{content:'•';position:absolute;left:0}.schedule-row em{display:block;color:#f1f7ff}.contact{text-align:center;font-size:clamp(13px,2.05cqw,16px);line-height:1.3;margin:32px -3% 0}.contact em{display:block}.contact a:hover{text-decoration:underline}
 .activities-page{padding-top:50px;text-align:center}.activities-page h1{font-size:clamp(23px,4cqw,31px);line-height:1.1}.activities-script{width:25%;min-width:130px;margin:0 auto}.activity{display:block;width:76%;margin:24px auto 0;font-size:clamp(13px,2.25cqw,17px)}.activity>img{width:76%;margin:0 auto 7px;transition:transform .2s}.activity:hover>img{transform:scale(1.025)}.activity em,.activity strong{display:block;line-height:1.2}.detail-button{flex-direction:row;gap:14px;margin:12px auto 0;width:220px;max-width:100%;min-height:43px;padding:5px 7px 5px 17px;font-size:14px}.detail-button>span{display:flex;align-items:center;justify-content:center;margin-left:auto;border:2px solid #ffc37c;background:#ffa046;border-radius:50%;width:30px;height:30px;font-size:26px;line-height:1}.activity+.activity{margin-top:32px}.thanks{font-size:clamp(15px,2.6cqw,20px);font-weight:700;margin:45px 20px 0;line-height:1.2}.party-page{text-align:center;padding-top:15%}.party-page h1{font-size:clamp(28px,5.45cqw,42px);line-height:1.12;margin-bottom:14px}.party-page .section-cta{margin-top:45px}.golf-header{width:100%;margin-top:-1px}.golf-title{text-align:center;font-size:clamp(29px,5.8cqw,44px);line-height:1.02;color:#fff;letter-spacing:.02em;text-shadow:0 4px 0 #0739b3,0 1px 3px #fff7;margin:35px 12px 0}.golf-page .section-cta{margin-top:42px}.golf-program-page{padding-bottom:0;background:#0e75f4}.golf-program-content{width:78%;margin:40px auto 0;text-align:center;position:relative;z-index:1}.golf-program-content h2{font-size:20px;margin-top:28px}.golf-program-content p{margin:5px 0;font-size:16px}.golf-schedule{text-align:left;font-size:15px;line-height:1.4;margin-top:25px}.golf-schedule>div{display:grid;grid-template-columns:28% 72%;margin:17px 0;gap:10px}.golf-schedule dt{font-weight:700}.golf-schedule dd{margin:0}.golf-contact{width:84%;margin:50px auto 0}.landscape{width:100%;position:relative;mask-image:linear-gradient(transparent,#000 27%)}.golf-program-page .landscape{margin-top:0}.golf-program-page .section-cta{position:relative;z-index:1}
 .form-page{padding-bottom:70px}.form-main-title{text-align:center;font-size:clamp(26px,4.8cqw,36px);margin:30px 12px 20px}.form-subtitle{text-align:center;font-size:clamp(19px,3cqw,24px);line-height:1.2;margin:36px 20px 26px;font-weight:400}.form-subtitle em{display:block;font-size:.92em;font-weight:400;margin-top:4px}.form-page .brand{margin-bottom:30px}.steps{list-style:none;padding:0;display:flex;justify-content:center;gap:24px;width:80%;margin:0 auto 30px;font-size:13px;color:#fff}.steps li{padding:0 0 7px;border-bottom:2px solid #fff5}.steps [aria-current]{color:#ffecaf;border-color:#ffdc79;font-weight:700}.registration-form{width:68%;margin:0 auto;position:relative;z-index:1}.registration-form label{display:block;font-size:15px;font-weight:400;line-height:1.25;margin-bottom:24px}.registration-form input,.registration-form select,.registration-form textarea{display:block;width:100%;min-height:44px;margin-top:8px;padding:11px 13px;border:1px solid #d9e4eb;border-radius:5px;background:#fff;color:#163561;font-size:16px;box-shadow:0 1px 1px #062a781a}.registration-form input::placeholder,.registration-form textarea::placeholder{color:#677b8d;font-size:14px;opacity:1}.registration-form select{padding-right:8px}.registration-form textarea{resize:vertical;min-height:105px}.required{color:#fff2be}.form-hint{font-size:13px;line-height:1.4;color:#fff;margin-top:-7px}.form-actions{display:flex;justify-content:flex-end;margin-top:26px}.next-button{border:1px solid #fff;border-radius:5px;min-height:44px;padding:9px 15px;color:#0740a8;background:linear-gradient(#fff,#d5e1ff);box-shadow:inset 0 -3px 4px #9dc4ff;font-weight:700;font-size:15px}.next-button span{margin-left:10px;font-size:24px;line-height:0;vertical-align:-2px}.flight-page{padding-top:65px}.flight-page .form-subtitle{margin-top:26px}.flight-page .registration-form label{margin-bottom:18px}fieldset{border:0;padding:0;margin:0;min-width:0}legend{display:block;width:100%;text-align:center;font-weight:700;font-size:17px;margin:15px 0 18px;padding:0}legend em{display:block;font-size:15px;font-weight:400;margin-top:3px}.travel-hint{text-align:center;margin:0 0 22px;color:#f1f6ff}.personal-title{font-size:18px;text-align:center;margin:30px 0 24px}.confirm-button{display:block;width:100%;min-height:46px;border:2px solid #b5edff;border-radius:999px;padding:9px 12px;color:#fff;background:linear-gradient(#91ddff 0%,#317afa 28%,#0851ce 60%,#64c8ff 100%);box-shadow:0 1px 8px #0451a64d,inset 0 2px 4px #fffc;font-size:clamp(12px,2.2cqw,16px);font-weight:700;margin-top:32px;text-shadow:0 1px 2px #023b9a}.confirm-button:hover{filter:brightness(1.08)}.privacy-note{text-align:center;margin:16px 0 0;font-size:12px;line-height:1.5}.form-error{padding:12px 14px;background:#fff4eb;color:#8f210b;border-left:4px solid #ed7332;border-radius:4px;font-size:15px;line-height:1.4;margin:18px 0}.golf-form-page{padding:65px 0 0;background:#2088ed}.golf-form-page .form-subtitle{margin-top:5px;margin-bottom:30px}.golf-form-page .landscape{margin-top:-7%;z-index:0}.golf-form-page .registration-form{z-index:1}.golf-form-page .registration-form label{margin-bottom:20px}.success-page{text-align:center;padding-top:35px}.success-brands{display:flex;gap:20px;align-items:center;justify-content:center;width:45%;margin:0 auto 40px}.success-brands img:first-child{width:40%}.success-brands img:last-child{width:56%}.success-page h1{font-size:clamp(29px,5cqw,40px);line-height:1.16;margin:0 15px 23px}.success-page>p{font-size:16px;line-height:1.6;margin:0 8%}.success-page .receipt{margin-top:16px;font-size:13px;color:#fff3c7}.success-page .section-cta{margin-top:30px}.success-page .text-link{font-size:14px}
 @media(min-width:1000px){body{padding:24px 0}.invitation{margin-bottom:24px}.page{min-height:972px}.home-page{min-height:1350px}}
-@media(max-width:480px){.page{padding-bottom:45px}.home-page{padding:0}.home-nav{padding:5% 3.8% 0;gap:2%}.home-nav .gold-button{min-height:44px;border-radius:10px;border-width:1.5px}.home-brand{margin-top:6%}.home-heading{margin-top:4%}.home-heading h1{font-size:6cqw}.home-location{margin-top:4%}.home-date{margin-top:3%}.back-link{left:6px;top:4px;font-size:13px}.brand{margin-top:49px}.letter-content,.agenda-content{width:84%}.letter-content{line-height:1.4;font-size:15px}.letter-content p{margin-bottom:19px}.art-title img{min-width:140px}.welcome-title img{min-width:220px}.ocean-page{padding-bottom:42cqw}.event-facts{font-size:14px}.event-facts dd{padding-left:12px}.event-facts dt{padding-right:8px}.schedule{font-size:15px}.schedule-row{grid-template-columns:30% 70%}.contact{font-size:14px}.activities-page{padding-top:52px;min-height:100dvh}.activities-page h1{font-size:24px}.activity{width:91%;margin-top:25px}.activity>img{width:75%}.activity+.activity{margin-top:28px}.thanks{margin-top:40px;font-size:16px}.party-page{padding-top:100px}.golf-title{margin-top:28px}.golf-program-content{width:85%;margin-top:33px}.golf-schedule{font-size:14px}.golf-schedule>div{grid-template-columns:30% 70%;gap:4px}.golf-contact{font-size:13px}.golf-program-page{padding-bottom:0}.registration-form{width:82%}.form-main-title{margin-top:24px;font-size:27px}.form-subtitle{font-size:19px;margin-top:25px}.steps{gap:15px;width:90%;font-size:12px;margin-bottom:25px}.registration-form label{font-size:14px;margin-bottom:24px}.flight-page{padding-top:46px}.golf-form-page{padding-top:62px;padding-bottom:0}.golf-form-page .landscape{margin-top:0}.golf-form-page .privacy-note{max-width:90%;margin-left:auto;margin-right:auto}.success-page{padding-top:45px}.success-brands{width:65%;margin-bottom:40px}.success-page h1{font-size:30px}.success-page>p{font-size:15px}.confirm-button{font-size:12px}.personal-title{font-size:17px}.golf-page .text-link{font-size:14px}}
+@media(max-width:480px){.page{padding-bottom:45px}.home-page{padding:0}.home-nav{padding:5% 3.8% 0;gap:2%}.home-nav .gold-button{min-height:44px;border-radius:10px;border-width:1.5px}.home-brand{margin-top:6%}.home-heading{margin-top:4%}.home-heading h1{font-size:6cqw}.home-location{margin-top:4%}.home-date{margin-top:3%}.back-link{left:6px;top:4px;font-size:13px}.brand{margin-top:49px}.letter-content,.agenda-content{width:84%}.letter-content{line-height:1.4;font-size:15px}.letter-content p{margin-bottom:19px}.art-title img{min-width:140px}.welcome-title img{min-width:272px}.ocean-page{padding-bottom:42cqw}.event-facts{font-size:14px}.event-facts dd{padding-left:12px}.event-facts dt{padding-right:8px}.schedule{font-size:15px}.schedule-row{grid-template-columns:30% 70%}.contact{font-size:14px}.activities-page{padding-top:52px;min-height:100dvh}.activities-page h1{font-size:24px}.activity{width:91%;margin-top:25px}.activity>img{width:75%}.activity+.activity{margin-top:28px}.thanks{margin-top:40px;font-size:16px}.party-page{padding-top:100px}.golf-title{margin-top:28px}.golf-program-content{width:85%;margin-top:33px}.golf-schedule{font-size:14px}.golf-schedule>div{grid-template-columns:30% 70%;gap:4px}.golf-contact{font-size:13px}.golf-program-page{padding-bottom:0}.registration-form{width:82%}.form-main-title{margin-top:24px;font-size:27px}.form-subtitle{font-size:19px;margin-top:25px}.steps{gap:15px;width:90%;font-size:12px;margin-bottom:25px}.registration-form label{font-size:14px;margin-bottom:24px}.flight-page{padding-top:46px}.golf-form-page{padding-top:62px;padding-bottom:0}.golf-form-page .landscape{margin-top:0}.golf-form-page .privacy-note{max-width:90%;margin-left:auto;margin-right:auto}.success-page{padding-top:45px}.success-brands{width:65%;margin-bottom:40px}.success-page h1{font-size:30px}.success-page>p{font-size:15px}.confirm-button{font-size:12px}.personal-title{font-size:17px}.golf-page .text-link{font-size:14px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
 
 /* Apply the gold split to each text line so font size and line height cannot shift it. */
@@ -192,7 +203,7 @@ body{padding-inline:env(safe-area-inset-left,0px) env(safe-area-inset-right,0px)
   .home-brand{grid-column:2;grid-row:2;align-self:start;justify-self:end;width:min(46%,285px);margin:35px clamp(55px,6vw,105px) 0 0}
   .home-anniversary{grid-column:2;grid-row:2;align-self:end;justify-self:end;width:min(50%,335px);margin:0 clamp(55px,6vw,105px) 20px 0}
 
-  .letter-page:after,.agenda-page:after{display:block;width:100%;height:min(900px,70vw);background:linear-gradient(180deg,rgba(3,55,177,.12),rgba(3,49,168,.6) 65%,rgba(3,38,148,.76)),url('assets/images/ocean.webp') center bottom/cover no-repeat;mask-image:linear-gradient(transparent,#000 22%)}
+  .letter-page:after,.agenda-page:after{display:block;width:100%;height:min(900px,70vw);background:url('assets/images/home-background.webp') center bottom/100% auto no-repeat;mask-image:linear-gradient(transparent,#000 22%)}
   .letter-page,.agenda-page{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);column-gap:clamp(36px,4vw,86px);align-items:start;padding:0 clamp(44px,5vw,90px) 80px}
   .letter-page>.back-link,.agenda-page>.back-link{position:absolute}
   .page-intro{position:sticky;top:24px;grid-column:1;min-height:100dvh;align-self:start;display:flex;flex-direction:column;align-items:center;padding-top:clamp(120px,12vh,190px);isolation:isolate}
@@ -205,7 +216,7 @@ body{padding-inline:env(safe-area-inset-left,0px) env(safe-area-inset-right,0px)
   .letter-content p{margin-bottom:22px}
   .horizon{font-size:clamp(36px,3.1vw,48px)}
   .letter-content .horizon-subtitle{font-size:clamp(23px,1.9vw,30px)}
-  .welcome-title img{width:min(44%,340px)}
+  .welcome-title img{width:clamp(398px,42.7vw,623px);max-width:100%}
   .english-horizon{font-size:25px}
   .agenda-content{font-size:18px}
   .agenda-content .event-title{font-size:clamp(33px,2.8vw,44px)}
@@ -385,4 +396,158 @@ h1,h2,h3,.gold-line,.home-nav .gold-button,.section-cta,.detail-button,
 
 .letter-page .horizon-art{width:min(90%,720px);margin:clamp(18px,2vw,28px) auto 8px}.letter-page .horizon-art img{display:block;width:100%;height:auto;margin:0 auto}
 
+.letter-page .page-intro .anniversary,.agenda-page .page-intro .anniversary{width:30%;min-width:165px;margin:0 auto 12px}
+@media(min-width:1100px){.letter-page .page-intro .anniversary,.agenda-page .page-intro .anniversary{width:clamp(225px,24vw,350px);min-width:0;margin-bottom:16px}}
+
 @media(min-width:1100px){.home-page{background-image:linear-gradient(180deg,#0a22c3 0px,rgba(10,34,195,.96) 220px,rgba(10,34,195,.62) 500px,rgba(10,34,195,0) 850px),url('assets/images/home-background.webp');background-size:100% 100%,100% auto;background-position:center,center bottom;background-repeat:no-repeat}}
+
+.letter-page,.agenda-page{padding-bottom:min(48cqw,900px)}
+
+/* Event highlights follow the supplied single-column composition at every width. */
+.activities-page{display:flex;flex-direction:column;align-items:center;min-height:100dvh;padding:clamp(42px,4.5cqw,70px) 20px clamp(70px,8cqw,120px);background:linear-gradient(180deg,#0829c4 0%,#1165e9 38%,#117af5 69%,#0735cb 100%);text-align:center}
+.activities-branding{display:flex;align-items:center;justify-content:center;gap:clamp(18px,4cqw,65px);width:100%;margin:0 auto clamp(8px,1.5cqw,22px)}
+.activities-branding img:first-child{width:clamp(125px,16cqw,225px)}
+.activities-branding img:last-child{width:clamp(145px,19cqw,260px)}
+.activities-page h1{display:flex;flex-direction:column;align-items:center;grid-column:auto;margin:0 0 clamp(30px,3.4cqw,50px);font-size:clamp(25px,4.15cqw,58px);line-height:1.08}
+.activities-script{width:clamp(175px,23cqw,325px);min-width:0;margin:0 auto clamp(5px,.8cqw,12px)}
+.activity-headline{display:flex;flex-wrap:wrap;justify-content:center;column-gap:.24em;row-gap:0;max-width:100%;font-size:inherit;line-height:1.05}
+.activities-page .activity-headline{font-weight:700;filter:none}
+.activities-page .activity-headline .gold-line{padding-bottom:.12em;font-weight:700;filter:none;background-image:linear-gradient(180deg,#f6d17c 0%,#fff1b8 18%,#ffe8a0 31%,#e4a351 44%,#f9d47a 70%,#edb45c 100%)}
+@media(forced-colors:active){.activities-page .activity-headline .gold-line{background:none}}
+.activities-english{display:block;margin-top:0;color:#fff;font-size:clamp(15px,2.2cqw,31px);font-weight:700;line-height:1.15}
+.activities-page .activity,.activities-page .activity+.activity{display:flex;flex-direction:column;align-items:center;width:min(100%,760px);max-width:760px;margin:0 auto;gap:0;font-size:clamp(16px,1.6cqw,23px)}
+.activities-page .activity+.activity{margin-top:clamp(45px,5.5cqw,80px)}
+.activities-page .activity>img{display:block;width:min(65%,480px);height:auto;object-fit:contain;margin:0 auto clamp(7px,1cqw,14px)}
+.activity-label{display:block;font-style:normal;line-height:1.3}
+.activities-page .activity>strong{display:block;min-height:0;margin-top:2px;font-size:clamp(16px,1.65cqw,24px);line-height:1.2}
+.activities-page .detail-button{position:relative;display:flex;flex-direction:row;justify-content:center;width:clamp(250px,27cqw,380px);max-width:100%;min-height:clamp(58px,5.2cqw,72px);margin:clamp(12px,1.3cqw,18px) auto 0;padding:5px 48px 5px 15px;border-radius:999px;border-color:#ffe2a0;box-shadow:inset 0 2px 2px #fff9,0 3px 0 #d47a24,0 5px 10px #00267566}
+.activities-page .detail-button>.detail-copy{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;height:auto;margin:0;border:0;border-radius:0;background:none;font-size:inherit;line-height:1.05}
+.activities-page .detail-copy strong{display:block;min-height:0;margin:0;font-size:clamp(15px,1.45cqw,21px);line-height:1.05}
+.activities-page .detail-copy small{display:block;margin-top:2px;font-size:clamp(11px,1.08cqw,16px);font-weight:400;line-height:1.05}
+.activities-page .detail-button>.detail-orb{position:absolute;right:5px;top:50%;width:clamp(45px,4.3cqw,61px);height:auto;aspect-ratio:1;margin:0;transform:translateY(-50%);border:3px solid #ffbf6f;border-radius:50%;background:linear-gradient(135deg,#ffbc70,#f8873f);box-shadow:inset 0 2px 5px #fff8,0 2px 4px #a94f2199}
+.activities-page .thanks{grid-column:auto;max-width:900px;margin:clamp(52px,6cqw,90px) auto 0;font-size:clamp(18px,2.25cqw,32px);line-height:1.22}
+@media(max-width:599px){.activities-branding{gap:14px}.activities-branding img:first-child{width:32%}.activities-branding img:last-child{width:38%}.activities-page h1{font-size:clamp(25px,6.3cqw,38px)}.activities-script{width:46%}.activities-page .activity,.activities-page .activity+.activity{width:100%}.activities-page .activity>img{width:65%}.activities-page .activity>strong{font-size:clamp(15px,4cqw,19px)}.activities-page .thanks{font-size:clamp(16px,4cqw,20px)}}
+
+/* The party detail page follows the centered invitation artwork. */
+.party-page{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;min-height:100dvh;padding:clamp(35px,5cqw,80px) 20px 80px;text-align:center;background:linear-gradient(180deg,#071fc2 0%,#0f6cf0 42%,#1180f8 64%,#0927c6 100%);isolation:isolate}
+.party-page::before{content:none}
+.party-branding{display:flex;align-items:center;justify-content:center;gap:clamp(15px,3cqw,40px);width:100%;margin:0 auto clamp(25px,3cqw,45px)}
+.party-branding img:first-child{width:clamp(100px,14cqw,180px)}
+.party-branding img:last-child{width:clamp(130px,19cqw,230px)}
+.party-page h1{margin:0 auto;font-size:clamp(30px,5.5cqw,72px);font-weight:700;line-height:1.07;filter:none}
+.party-page .gold-line{margin:0 auto;padding-bottom:.08em;font-weight:700;filter:none;background-image:linear-gradient(180deg,#fff0b7 0%,#ffe6a0 32%,#e4a351 56%,#f4c66e 100%)}
+.party-page .subtitle{margin:2px auto 0;font-size:clamp(13px,2.2cqw,22px);font-weight:700;line-height:1.2;text-align:center}
+.party-page .section-cta{width:clamp(220px,30cqw,280px);min-width:0;max-width:100%;min-height:46px;margin:clamp(36px,4cqw,56px) auto 0}
+.party-page .section-cta small{white-space:nowrap}
+@media(forced-colors:active){.party-page .gold-line{background:none}}
+
+/* Three independent registration screens share the same invitation framing. */
+.party-form-page{min-height:100dvh;padding:clamp(32px,5cqw,68px) 20px 90px;background:linear-gradient(180deg,#0825c5 0%,#126cf0 42%,#117cf5 65%,#0723c1 100%)}
+.party-form-branding{display:flex;align-items:center;justify-content:center;gap:clamp(14px,3cqw,38px);width:100%;margin:0 auto clamp(22px,3cqw,38px)}
+.party-form-branding img:first-child{width:clamp(100px,14cqw,180px)}
+.party-form-branding img:last-child{width:clamp(130px,19cqw,230px)}
+.party-form-page .form-main-title{margin:0 auto;font-size:clamp(29px,4.8cqw,54px);font-weight:700;line-height:1.1;filter:none}
+.party-form-page .form-main-english{margin:2px auto 0;font-size:clamp(15px,2.2cqw,21px);line-height:1.25;text-align:center}
+.party-form-page .form-subtitle{margin:0 auto;color:#fff;font-size:clamp(18px,2.3cqw,27px);line-height:1.16;text-align:center}
+.party-form-page .form-subtitle em{margin-top:3px;font-size:.8em;font-weight:400}
+.guest-page .form-subtitle{margin-top:clamp(24px,3.2cqw,40px);font-size:clamp(16px,2cqw,23px)}
+.party-form-page .registration-form{width:min(68%,600px);max-width:600px;margin:clamp(22px,3cqw,36px) auto 0}
+#guest-form,#flight-form,#hotel-form{display:block;grid-template-columns:none}
+.party-form-page .registration-form label,.party-form-page .select-field,.party-form-page .date-field{display:block;margin:0 0 clamp(18px,2.3cqw,28px);font-size:clamp(13px,1.25cqw,16px);font-weight:400;line-height:1.2}
+.party-form-page .registration-form label,.party-form-page .select-label,.party-form-page .date-label{font-family:GothamVietnameseBook,Gotham,Arial,sans-serif;font-weight:400;color:#fff}
+.party-form-page .registration-form input,.party-form-page .registration-form select,.party-form-page .registration-form textarea,.party-form-page .select-trigger,.party-form-page .date-trigger{min-height:44px;margin-top:9px;font-size:15px;font-weight:400;color:#163561}
+.party-form-page .registration-form .bilingual-input input{margin-top:0}
+.party-form-page .select-label,.party-form-page .date-label{font-weight:400}
+.party-form-page .form-actions{justify-content:flex-end;margin-top:clamp(30px,4cqw,50px)}
+.party-form-page .next-button{min-height:40px;padding:6px 13px;font-size:clamp(12px,1.2cqw,15px)}
+.next-button span[lang="en"]{margin-left:0;font-size:inherit;line-height:inherit;vertical-align:baseline}
+
+/* Registration confirmation follows the invitation's single-column artwork. */
+.success-page{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;min-height:max(100dvh,135cqw);padding:clamp(34px,5cqw,68px) 20px 80px;background:linear-gradient(180deg,#0825c5 0%,#126cf0 42%,#117cf5 65%,#0723c1 100%);text-align:center}
+.success-page .success-brands{display:flex;align-items:center;justify-content:center;gap:clamp(14px,3cqw,38px);width:100%;margin:0 auto clamp(36px,5cqw,60px)}
+.success-page .success-brands img:first-child{width:clamp(100px,14cqw,180px)}
+.success-page .success-brands img:last-child{width:clamp(130px,19cqw,230px)}
+.success-page h1{margin:0 auto;font-size:clamp(27px,4.5cqw,48px);font-weight:700;line-height:1.08;filter:none}
+.success-page .gold-line{margin:0 auto;padding-bottom:.08em;filter:none;background-image:linear-gradient(180deg,#fff0b7 0%,#ffe6a0 32%,#e4a351 56%,#f4c66e 100%)}
+.success-page .success-english-title{width:auto;max-width:100%;margin:4px auto 0;font-size:clamp(15px,2.3cqw,23px);font-weight:400;line-height:1.3}
+.success-page .success-copy{width:min(100%,580px);margin:clamp(30px,4cqw,52px) auto 0}
+.success-page .success-copy p{margin:0;font-size:clamp(13px,1.7cqw,18px);line-height:1.55}
+.success-page .success-copy p:first-child{font-weight:400}
+.success-page .success-copy p+p{margin-top:8px;font-weight:400}
+.success-page .section-cta{width:clamp(215px,28cqw,280px);min-width:0;max-width:100%;min-height:54px;margin:clamp(28px,4cqw,46px) auto 0}
+.success-page .section-cta strong{font-weight:700}
+.success-page .section-cta small{white-space:nowrap}
+@media(max-width:480px){.success-page h1{font-size:clamp(26px,6cqw,34px)}.success-page .success-copy p{font-size:13px}}
+@media(forced-colors:active){.success-page .gold-line{background:none}}
+
+/* Golf invitation cover. */
+.golf-page{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;min-height:max(100dvh,135cqw);padding:clamp(52px,7cqw,82px) 20px 80px;background:linear-gradient(180deg,#0825c5 0%,#0c48d7 25%,#117af5 49%,#117af5 69%,#0825c5 100%);text-align:center}
+.golf-page::before{content:none}
+.golf-page .golf-branding{display:flex;align-items:center;justify-content:center;gap:clamp(14px,3cqw,38px);width:100%;margin:0 auto clamp(65px,10cqw,120px)}
+.golf-page .golf-branding img:first-child{width:clamp(100px,14cqw,180px)}
+.golf-page .golf-branding img:last-child{width:clamp(130px,19cqw,230px)}
+.golf-page .golf-title{width:100%;margin:0 auto;font-size:clamp(33px,5.4cqw,64px);font-weight:700;line-height:.95;letter-spacing:0;color:#fff;text-shadow:0 5px 0 #063abc,0 1px 2px #fff9}
+.golf-page .section-cta{width:clamp(215px,30cqw,280px);min-width:0;max-width:100%;min-height:54px;margin:clamp(36px,5cqw,56px) auto 0}
+.golf-page .section-cta small{white-space:nowrap}
+@media(max-width:480px){.golf-page .golf-title{font-size:clamp(29px,6cqw,38px)}}
+
+/* Golf program follows the single-column invitation artwork. */
+.golf-page .golf-title a{color:inherit;text-decoration:none;display:inline-block}
+.golf-page .golf-title a:hover,.golf-page .golf-title a:focus-visible{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:8px}
+.golf-program-page{display:flex;flex-direction:column;align-items:center;min-height:100dvh;padding:0;background:linear-gradient(180deg,#0730c3 0%,#0d64e8 26%,#117cf5 72%,#0d68e7 100%);text-align:center}
+.golf-program-page .golf-header{width:100%;height:auto;max-height:none;margin:0;clip-path:none;background:none}
+.golf-program-page .golf-header{clip-path:ellipse(50% 100% at 50% 0)}
+.golf-program-anniversary{display:block;width:clamp(130px,22cqw,210px);height:auto;margin:clamp(8px,1.5cqw,20px) auto 0}
+.golf-program-page .golf-title{margin:clamp(8px,1.5cqw,18px) auto 0;font-size:clamp(31px,5.2cqw,56px);line-height:1}
+.golf-program-page .golf-title{color:transparent;background-image:radial-gradient(ellipse at 58% 62%,#b6bec9 0 14%,#e9edf0 34%,transparent 58%),linear-gradient(#fff,#f4f7fa);background-size:14px 12px,100% 100%;background-clip:text;-webkit-background-clip:text;text-shadow:none;filter:drop-shadow(0 4px 0 #0739b3)}
+.golf-program-page .golf-program-content{display:block;width:min(82%,720px);max-width:720px;margin:clamp(28px,4cqw,48px) auto 0;text-align:center}
+.golf-program-page .golf-program-content h2{margin:0;font-size:clamp(16px,2cqw,21px);line-height:1.25}
+.golf-program-page .golf-program-content p{margin:3px 0 0;font-size:clamp(12px,1.55cqw,16px)}
+.golf-program-page .golf-facts h2:not(:first-child){margin:clamp(19px,3cqw,31px) 0 0}
+.golf-program-page .golf-itinerary{margin-top:clamp(22px,3.5cqw,36px)}
+.golf-program-page .golf-schedule{margin:clamp(12px,2cqw,22px) 0 0;font-size:clamp(12px,1.6cqw,16px);line-height:1.4;text-align:left}
+.golf-program-page .golf-schedule>div{display:grid;grid-template-columns:24% minmax(0,1fr);gap:12px;margin:clamp(9px,1.4cqw,15px) 0}
+.golf-program-page .golf-schedule dt{white-space:nowrap}
+.golf-program-page .golf-thanks{width:min(90%,720px);margin:clamp(20px,3.5cqw,36px) auto 0;font-size:clamp(16px,2cqw,22px)}
+.golf-program-page .golf-contact{position:static;transform:none;width:min(90%,720px);margin:clamp(30px,5cqw,55px) auto 0;color:#fff;font-size:clamp(12px,1.55cqw,16px);line-height:1.55;text-shadow:none}
+.golf-program-page .golf-contact em,.golf-program-page .golf-contact a{color:#fff}
+.golf-program-page .golf-landscape-wrap{width:100%;margin:clamp(22px,3cqw,35px) 0 0}
+.golf-program-page .golf-landscape-wrap::after{display:none}
+.golf-program-page .golf-landscape-wrap .landscape{display:block;width:100%;height:auto;max-height:none;object-fit:cover;mask-image:linear-gradient(transparent 0%,#000 31%)}
+@media(max-width:600px){.golf-program-page .golf-schedule>div{grid-template-columns:25% minmax(0,1fr);gap:8px}.golf-program-page .golf-landscape-wrap .landscape{height:auto;object-fit:cover}}
+
+/* Golf registration keeps the form above the course photograph. */
+.golf-form-page{min-height:max(100dvh,135cqw);padding:clamp(32px,5cqw,55px) 20px 0;background:linear-gradient(180deg,#0825c5 0%,#1475ef 47%,#1688f3 76%,#1479e8 100%);text-align:center}
+.golf-form-branding{display:flex;align-items:center;justify-content:center;gap:clamp(14px,3cqw,38px);width:100%;margin:0 auto clamp(20px,3cqw,34px)}
+.golf-form-branding img:first-child{width:clamp(100px,14cqw,180px)}
+.golf-form-branding img:last-child{width:clamp(130px,19cqw,230px)}
+.golf-form-page .form-subtitle{margin:0 auto clamp(25px,3cqw,38px);font-size:clamp(18px,2.6cqw,28px);line-height:1.15}
+.golf-form-page .form-subtitle em{margin-top:4px;font-size:.85em;font-style:normal}
+.golf-form-page #golf-form{display:block;grid-template-columns:none;width:min(68%,620px);max-width:620px;margin:0 auto;text-align:left;position:relative;z-index:1}
+.golf-form-page .registration-form label,.golf-form-page .select-field{display:block;margin:0 0 clamp(16px,2.2cqw,25px);font-size:clamp(13px,1.55cqw,17px);font-weight:400;line-height:1.2}
+.golf-form-page .registration-form input,.golf-form-page .select-trigger,.golf-form-page .registration-form textarea{min-height:40px;margin-top:7px;font-size:clamp(13px,1.65cqw,17px);font-weight:400}
+.golf-form-page .registration-form textarea{min-height:102px;resize:none}
+.golf-form-page .confirm-button{width:100%;max-width:none;min-height:40px;margin:clamp(29px,4cqw,48px) auto 0;font-size:clamp(12px,1.5cqw,16px)}
+.golf-form-page .privacy-note{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.golf-form-page .landscape{position:absolute;z-index:0;left:0;bottom:0;width:100%;height:clamp(270px,37cqw,500px);margin:0;object-fit:cover;object-position:center bottom;mask-image:linear-gradient(transparent 0%,#000 27%)}
+@media(max-width:599px){.golf-form-page #golf-form{width:calc(100% - 20px)}.golf-form-page .landscape{height:34cqw;min-height:240px}}
+.party-form-page .form-hint:not(.form-error){position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.flight-page.party-form-page .form-subtitle{margin-top:0}
+.flight-page.party-form-page .form-subtitle strong,.flight-page.party-form-page legend{font-weight:400}
+.flight-page.party-form-page .registration-form{margin-top:clamp(23px,3cqw,38px)}
+.flight-page.party-form-page fieldset+fieldset{margin-top:clamp(16px,2cqw,26px)}
+.flight-page.party-form-page legend{margin:0 0 clamp(16px,2cqw,25px);font-size:clamp(16px,1.8cqw,22px);line-height:1.2}
+.flight-page.party-form-page legend em{margin-top:3px;font-size:.8em;font-weight:400}
+.hotel-page.party-form-page .form-subtitle{font-size:clamp(17px,2.1cqw,25px)}
+.hotel-page.party-form-page .registration-form{margin-top:clamp(34px,4cqw,52px)}
+.hotel-page.party-form-page .personal-title{margin:clamp(26px,3cqw,38px) 0 clamp(18px,2cqw,26px);font-size:clamp(17px,1.9cqw,23px);line-height:1.2}
+.hotel-page.party-form-page .personal-title em{display:block;margin-top:3px;font-size:.75em;font-style:normal;font-weight:400}
+.hotel-page.party-form-page .confirm-button{max-width:none;min-height:46px;margin:clamp(36px,4cqw,52px) auto 0;font-size:clamp(12px,1.25cqw,16px)}
+@media(max-width:599px){.party-form-page .registration-form{width:calc(100% - 20px)}.party-form-page .form-main-title{font-size:clamp(27px,6.2cqw,36px)}.party-form-page .registration-form label,.party-form-page .select-field,.party-form-page .date-field{font-size:14px}}
+
+.guest-page .form-main-title{font-weight:700;filter:none;background-image:linear-gradient(180deg,#f6d17c 0%,#fff1b8 18%,#ffe8a0 31%,#e4a351 44%,#f9d47a 70%,#edb45c 100%)}
+.guest-page .form-main-english,.guest-page .form-subtitle em{font-weight:400}
+.registration-form input,.registration-form textarea,.registration-form .select-trigger,.registration-form .select-option,.registration-form .date-trigger,.registration-form .bilingual-placeholder{font-family:GothamVietnameseBook,Gotham,Arial,sans-serif;font-weight:400}
+.registration-form input::placeholder,.registration-form textarea::placeholder{font-family:GothamVietnameseBook,Gotham,Arial,sans-serif;font-weight:400}
+.registration-form .select-option[aria-selected=true]{font-weight:400}
+@media(forced-colors:active){.guest-page .form-main-title{background:none}}

@@ -10,6 +10,14 @@
   },
   "rewrites": [
     {
+      "source": "/trang-chu",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/trang-chu/:path*",
+      "destination": "/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
