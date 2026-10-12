@@ -30,10 +30,10 @@
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
 
 /* Apply a soft gold transition to each text line. */
-.gold-line{display:block;width:max-content;max-width:100%;margin-inline:auto;padding-top:.22em;padding-bottom:.18em;line-height:1.3;overflow:visible}
+.gold-line{display:block;width:max-content;max-width:100%;margin-inline:auto;padding-top:.12em;padding-bottom:.1em;line-height:1.2;overflow:visible}
 @supports (background-clip:text) or (-webkit-background-clip:text){
   .gold-text,.gold-line{
-    background-image:linear-gradient(180deg,#ffe9a9 0%,#ffdd8b 38%,#f7ca70 66%,#edb45d 100%);
+    background-image:linear-gradient(180deg,#fff2bd 0%,#ffe4a0 32%,#edb260 70%,#dc9848 100%);
     background-size:100% 100%;
     background-repeat:no-repeat;
     background-clip:text;
@@ -47,7 +47,7 @@
   .gold-text,.gold-line{background:none;color:CanvasText;-webkit-text-fill-color:CanvasText}
 }
 /* Stronger two-tone display headings. */
-.gold-text{font-family:Gotham,Arial,sans-serif;font-weight:900;font-synthesis:weight;-webkit-text-stroke:0;text-shadow:none}.gold-text:not(:has(.gold-line)){padding-top:.22em;padding-bottom:.18em;line-height:1.3;overflow:visible}.gold-line{-webkit-text-stroke:0;text-shadow:none}h1:focus:not(:focus-visible),h2:focus:not(:focus-visible){outline:none}
+.gold-text{font-family:Gotham,Arial,sans-serif;font-weight:900;font-synthesis:weight;-webkit-text-stroke:0;text-shadow:none}.gold-text:not(:has(.gold-line)){padding-top:.12em;padding-bottom:.1em;line-height:1.2;overflow:visible}.gold-line{-webkit-text-stroke:0;text-shadow:none}h1:focus:not(:focus-visible),h2:focus:not(:focus-visible){outline:none}
 .home-heading h1{font-size:clamp(28px,6.6cqw,49px)}
 .horizon{font-size:clamp(25px,5.15cqw,40px)}
 .event-title{font-size:clamp(25px,4.55cqw,35px)}
@@ -414,7 +414,7 @@ h1,h2,h3,.gold-line,.home-nav .gold-button,.section-cta,.detail-button,
 .activities-script{width:clamp(175px,23cqw,325px);min-width:0;margin:0 auto clamp(5px,.8cqw,12px)}
 .activity-headline{display:flex;flex-wrap:wrap;justify-content:center;column-gap:.45em;row-gap:.08em;max-width:100%;font-size:inherit;line-height:1.2}
 .activities-page .activity-headline{font-weight:700;filter:none}
-.activities-page .activity-headline .gold-line{padding-top:.32em;padding-bottom:.2em;font-weight:700;line-height:1.3;filter:none;background-image:linear-gradient(180deg,#f6d17c 0%,#fff1b8 18%,#ffe8a0 31%,#e4a351 44%,#f9d47a 70%,#edb45c 100%)}
+.activities-page .activity-headline .gold-line{padding-top:.16em;padding-bottom:.12em;font-weight:700;line-height:1.2;filter:none;background-image:linear-gradient(180deg,#fff2bd 0%,#ffe4a0 32%,#edb260 70%,#dc9848 100%)}
 @media(forced-colors:active){.activities-page .activity-headline .gold-line{background:none}}
 .activities-english{display:block;margin-top:0;color:#fff;font-size:clamp(15px,2.2cqw,31px);font-weight:700;line-height:1.15}
 .activities-page .activity,.activities-page .activity+.activity{display:flex;flex-direction:column;align-items:center;width:min(100%,760px);max-width:760px;margin:0 auto;gap:0;font-size:clamp(16px,1.6cqw,23px)}
@@ -437,7 +437,7 @@ h1,h2,h3,.gold-line,.home-nav .gold-button,.section-cta,.detail-button,
 .party-branding img:first-child{width:clamp(100px,14cqw,180px)}
 .party-branding img:last-child{width:clamp(130px,19cqw,230px)}
 .party-page h1{margin:0 auto;font-size:clamp(30px,5.5cqw,72px);font-weight:700;line-height:1.07;filter:none}
-.party-page .gold-line{margin:0 auto;padding-bottom:.08em;font-weight:700;filter:none;background-image:linear-gradient(180deg,#fff0b7 0%,#ffe6a0 32%,#e4a351 56%,#f4c66e 100%)}
+.party-page .gold-line{margin:0 auto;padding-bottom:.08em;font-weight:700;filter:none;background-image:linear-gradient(180deg,#fff2bd 0%,#ffe4a0 32%,#edb260 70%,#dc9848 100%)}
 .party-page .subtitle{margin:2px auto 0;font-size:clamp(13px,2.2cqw,22px);font-weight:700;line-height:1.2;text-align:center}
 .party-page .section-cta{width:clamp(220px,30cqw,280px);min-width:0;max-width:100%;min-height:46px;margin:clamp(36px,4cqw,56px) auto 0}
 .party-page .section-cta small{white-space:nowrap}
@@ -470,7 +470,7 @@ h1,h2,h3,.gold-line,.home-nav .gold-button,.section-cta,.detail-button,
 .success-page .success-brands img:first-child{width:clamp(100px,14cqw,180px)}
 .success-page .success-brands img:last-child{width:clamp(130px,19cqw,230px)}
 .success-page h1{margin:0 auto;font-size:clamp(27px,4.5cqw,48px);font-weight:700;line-height:1.08;filter:none}
-.success-page .gold-line{margin:0 auto;padding-bottom:.08em;filter:none;background-image:linear-gradient(180deg,#fff0b7 0%,#ffe6a0 32%,#e4a351 56%,#f4c66e 100%)}
+.success-page .gold-line{margin:0 auto;padding-bottom:.08em;filter:none;background-image:linear-gradient(180deg,#fff2bd 0%,#ffe4a0 32%,#edb260 70%,#dc9848 100%)}
 .success-page .success-english-title{width:auto;max-width:100%;margin:4px auto 0;font-size:clamp(15px,2.3cqw,23px);font-weight:400;line-height:1.3}
 .success-page .success-copy{width:min(100%,580px);margin:clamp(30px,4cqw,52px) auto 0}
 .success-page .success-copy p{margin:0;font-size:clamp(13px,1.7cqw,18px);line-height:1.55}
@@ -547,7 +547,7 @@ h1,h2,h3,.gold-line,.home-nav .gold-button,.section-cta,.detail-button,
 .hotel-page.party-form-page .confirm-button{max-width:none;min-height:46px;margin:clamp(36px,4cqw,52px) auto 0;font-size:clamp(12px,1.25cqw,16px)}
 @media(max-width:599px){.party-form-page .registration-form{width:calc(100% - 20px)}.party-form-page .form-main-title{font-size:clamp(27px,6.2cqw,36px)}.party-form-page .registration-form label,.party-form-page .select-field,.party-form-page .date-field{font-size:14px}}
 
-.guest-page .form-main-title{padding-inline:.06em;font-weight:700;line-height:1.25;letter-spacing:.012em;filter:none;background-image:linear-gradient(180deg,#f6d17c 0%,#fff1b8 18%,#ffe8a0 31%,#e4a351 44%,#f9d47a 70%,#edb45c 100%)}
+.guest-page .form-main-title{padding-inline:.06em;font-weight:700;line-height:1.25;letter-spacing:.012em;filter:none;background-image:linear-gradient(180deg,#fff2bd 0%,#ffe4a0 32%,#edb260 70%,#dc9848 100%)}
 .guest-page .form-main-english,.guest-page .form-subtitle em{font-weight:400}
 .registration-form input,.registration-form textarea,.registration-form .select-trigger,.registration-form .select-option,.registration-form .date-trigger,.registration-form .bilingual-placeholder{font-family:GothamVietnameseBook,Gotham,Arial,sans-serif;font-weight:400}
 .registration-form input::placeholder,.registration-form textarea::placeholder{font-family:GothamVietnameseBook,Gotham,Arial,sans-serif;font-weight:400}
