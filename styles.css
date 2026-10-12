@@ -553,3 +553,33 @@ h1,h2,h3,.gold-line,.home-nav .gold-button,.section-cta,.detail-button,
 .registration-form input::placeholder,.registration-form textarea::placeholder{font-family:GothamVietnameseBook,Gotham,Arial,sans-serif;font-weight:400}
 .registration-form .select-option[aria-selected=true]{font-weight:400}
 @media(forced-colors:active){.guest-page .form-main-title{background:none}}
+
+/* Recreated port artwork: separate compositions for portrait and desktop. */
+.home-page::after{
+  content:'';
+  position:absolute;
+  inset:auto 0 0;
+  height:28%;
+  pointer-events:none;
+  background:url('assets/images/home-port-mobile-2026.png') center 78%/100% auto no-repeat;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 12%);
+  mask-image:linear-gradient(to bottom,transparent 0%,#000 12%);
+}
+.home-heading{z-index:1}
+.home-heading h1 .gold-line{
+  background-image:linear-gradient(to bottom,#fff3c4 0%,#fff3c4 49.9%,#ffdb88 50%,#ffdb88 100%);
+  background-clip:text;
+  -webkit-background-clip:text;
+  color:transparent;
+  -webkit-text-fill-color:transparent;
+  text-shadow:none;
+}
+@media(min-width:1100px){
+  .home-page::after{
+    height:43%;
+    background-image:url('assets/images/home-port-desktop-2026.png');
+    background-size:100% auto;
+    -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 22%);
+    mask-image:linear-gradient(to bottom,transparent 0%,#000 22%);
+  }
+}

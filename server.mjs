@@ -92,11 +92,11 @@ export function createApp({writeRegistration,publicOrigin=''}={}) {
    let resource=decodeURIComponent(url.pathname);
    if(resource==='/')resource='/index.html';
    if(resource!=='/index.html' && !path.extname(resource) && !resource.startsWith('/api/'))resource='/index.html';
-   const staticAllowed=['/index.html','/styles.css','/app.js'].includes(resource) || /^\/assets\/(images|fonts)\/[a-zA-Z0-9_.-]+\.(webp|otf|ttf)$/.test(resource);
+   const staticAllowed=['/index.html','/styles.css','/app.js'].includes(resource) || /^\/assets\/(images|fonts)\/[a-zA-Z0-9_.-]+\.(webp|png|otf|ttf)$/.test(resource);
    if(!staticAllowed){res.writeHead(404);res.end('Not found');return;}
    const file=path.join(ROOT,resource);
    const data=await readFile(file);const ext=path.extname(file);
-   res.writeHead(200,{'Content-Type':({'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.webp':'image/webp','.otf':'font/otf','.ttf':'font/ttf'})[ext],'Content-Length':data.length,'Cache-Control':resource.startsWith('/assets/')?'public, max-age=86400':'no-cache'});
+   res.writeHead(200,{'Content-Type':({'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.webp':'image/webp','.png':'image/png','.otf':'font/otf','.ttf':'font/ttf'})[ext],'Content-Length':data.length,'Cache-Control':resource.startsWith('/assets/')?'public, max-age=86400':'no-cache'});
    res.end(req.method==='HEAD'?undefined:data);
   }catch(err){if(err instanceof ValidationError)json(res,400,{ok:false,message:err.message});else if(err.code==='ENOENT'){res.writeHead(404);res.end('Not found');}else{console.error('Request failed:',err.name);json(res,500,{ok:false,message:'Có lỗi xảy ra. Vui lòng thử lại.'});}}
  });
