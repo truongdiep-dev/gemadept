@@ -135,5 +135,16 @@
     "file": "home-background.webp",
     "source": "GMD-thumoionl-02.jpg",
     "method": "Original lower artwork from y=1480; upper text removed using edge colour per row."
+  },
+  {
+    "file": "home-sea-2026.webp",
+    "source": "GMD-thumoionl-14-02 (1).jpg",
+    "method": "Clean upper background, blended into the source artwork from y=1450 to y=1600; source ship and sea below."
+  },
+  {
+    "file": "port-sea-2026.webp",
+    "source": "GMD-thumoionl-14-02 (1).jpg",
+    "cropAt1440px": [0, 1820, 1440, 2396],
+    "transparent": false
   }
 ]
