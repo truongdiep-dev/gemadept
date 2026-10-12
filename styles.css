@@ -673,3 +673,66 @@ h1,h2,h3,.gold-line,.home-nav .gold-button,.section-cta,.detail-button,
 .golf-page .section-cta{width:clamp(260px,42cqw,360px);min-width:0;max-width:100%;min-height:60px;padding:9px 18px;font-size:clamp(16px,2.4cqw,21px)}
 .golf-page .section-cta strong{font-family:GothamContact,Gotham,Arial,sans-serif;font-weight:400}
 .golf-page .section-cta small{font-size:clamp(10px,1.5cqw,13px)}
+
+/* Shared home artwork: native-ratio map above a softly blended port photo. */
+.letter-page,.agenda-page{
+  background:linear-gradient(180deg,#0827c4 0%,#154fd5 35%,#3495e5 65%,#3ca3e8 100%);
+  padding-bottom:42cqw;
+  isolation:isolate;
+}
+.agenda-page{
+  background:linear-gradient(180deg,#0827c4 0%,#154fd5 40%,#3495e5 85%,#3ca3e8 100%) top/100% var(--agenda-gradient-end,55%) no-repeat,#3ca3e8;
+}
+.letter-page::after,.agenda-page::after{
+  content:'';position:absolute;z-index:0;left:0;bottom:0;
+  width:100%;height:90cqw;pointer-events:none;
+  background:url('assets/images/home-port-mobile-labeled-2026.webp') center bottom/100% auto no-repeat;
+  -webkit-mask-image:linear-gradient(transparent,#000 38%);
+  mask-image:linear-gradient(transparent,#000 38%);
+}
+.letter-page::before,.agenda-page::before{
+  content:'';position:absolute;z-index:1;left:0;bottom:0;
+  width:100%;height:90cqw;pointer-events:none;
+  background:linear-gradient(180deg,#3b9ee7 0%,rgba(59,158,231,.78) 25%,rgba(59,158,231,.32) 48%,transparent 76%);
+  -webkit-mask-image:linear-gradient(transparent,#000 18%);
+  mask-image:linear-gradient(transparent,#000 18%);
+}
+.letter-page>*,.agenda-page>*{z-index:3}
+.letter-page>.ocean-map-art,.agenda-page>.ocean-map-art{
+  display:block;position:absolute;z-index:2;left:0;width:100%;
+  height:31.25cqw;pointer-events:none;opacity:.8;
+  -webkit-mask-image:linear-gradient(transparent,#000 18%,#000 75%,transparent);
+  mask-image:linear-gradient(transparent,#000 18%,#000 75%,transparent);
+}
+.ocean-map-art svg{display:block;width:100%;height:100%}
+.agenda-page>.ocean-map-art{top:calc(var(--agenda-map-top,60%) - clamp(16px,3cqw,40px))}
+.letter-page>.ocean-map-art{
+  top:calc(var(--letter-map-top,70%) - clamp(24px,4cqw,56px));
+  opacity:.9;
+}
+/* Give the letter's port photo more space below the copy on every screen. */
+.letter-page{
+  padding-bottom:50cqw;
+  background:linear-gradient(180deg,#0827c4 0%,#164fd2 30%,#297cde 65%,#3ca3e8 100%) top/100% var(--letter-gradient-end,55%) no-repeat,#3ca3e8;
+}
+.letter-page::before{
+  opacity:.35;
+  background:linear-gradient(180deg,rgba(60,163,232,0),rgba(60,163,232,.65) 22%,rgba(60,163,232,.25) 48%,transparent 76%);
+}
+.letter-page::after{
+  -webkit-mask-image:linear-gradient(transparent,#000 24%);
+  mask-image:linear-gradient(transparent,#000 24%);
+}
+@media(max-width:1099px){
+  .letter-page{padding-bottom:80cqw}
+  .letter-page>.ocean-map-art{
+    top:var(--letter-mobile-map-top,var(--letter-map-top,70%));
+  }
+}
+@media(min-width:1100px){
+  .letter-page::after,.agenda-page::after{
+    height:56.28cqw;
+    background-image:url('assets/images/home-port-desktop-labeled-2026.webp');
+  }
+  .letter-page::before,.agenda-page::before{height:56.28cqw}
+}
