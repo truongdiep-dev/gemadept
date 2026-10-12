@@ -561,7 +561,7 @@ h1,h2,h3,.gold-line,.home-nav .gold-button,.section-cta,.detail-button,
   inset:auto 0 0;
   height:28%;
   pointer-events:none;
-  background:url('assets/images/home-port-mobile-2026.png') center 78%/100% auto no-repeat;
+  background:url('assets/images/home-port-mobile-labeled-2026.png') center 78%/100% auto no-repeat;
   -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 12%);
   mask-image:linear-gradient(to bottom,transparent 0%,#000 12%);
 }
@@ -577,9 +577,78 @@ h1,h2,h3,.gold-line,.home-nav .gold-button,.section-cta,.detail-button,
 @media(min-width:1100px){
   .home-page::after{
     height:43%;
-    background-image:url('assets/images/home-port-desktop-2026.png');
+    background-image:url('assets/images/home-port-desktop-labeled-2026.png');
     background-size:100% auto;
     -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 22%);
     mask-image:linear-gradient(to bottom,transparent 0%,#000 22%);
   }
+}
+
+/* Shared transparent artwork for all party event headings. */
+.image-title{background:none;filter:none;text-shadow:none;line-height:0}
+.party-title-image{display:block;width:100%;height:auto;margin:0 auto}
+.home-heading .image-title{width:73%;max-width:900px;margin:2% auto 0}
+.agenda-content .image-title{display:block;width:85%;max-width:680px;margin:0 auto 8px}
+.party-page .image-title{width:75%;max-width:860px;margin:0 auto}
+@media(min-width:1100px){.home-heading .image-title{width:59%;margin-top:14px}.party-page .image-title{width:64%}}
+
+/* Slightly larger English event heading on the homepage. */
+.home-eyebrow{font-size:clamp(12px,2.65cqw,19px)}
+@media(min-width:1100px){.home-eyebrow{font-size:clamp(18px,1.4vw,22px)}}
+
+/* One-line artwork on the agenda, cropped to the title's transparent bounds. */
+.agenda-content .event-title .party-title-image{aspect-ratio:10/1;object-fit:cover;object-position:center;height:auto}
+
+/* Transparent single-line activity details heading. */
+.activities-page .activity-headline{display:block;width:80%;max-width:940px;margin:0 auto;background:none;text-shadow:none;filter:none}
+.activity-details-title-image{display:block;width:100%;height:auto;aspect-ratio:10/1;object-fit:cover;object-position:center;margin:0 auto}
+
+/* Transparent artwork for the guest attendance confirmation title. */
+.guest-page .attendance-image-title{width:86%;max-width:828px;margin-inline:auto;padding:0;background:none;filter:none;line-height:0}
+.attendance-image-title img{display:block;width:100%;height:auto;aspect-ratio:7.5/1;object-fit:cover;object-position:center;margin:0 auto}
+
+/* Shared transparent artwork for both registration success pages. */
+.success-page .success-image-title{width:85%;max-width:850px;margin:0 auto;background:none;filter:none;line-height:0}
+.registration-success-title-image{display:block;width:100%;height:auto;margin:0 auto}
+
+/* Slightly larger white English theme in the open letter. */
+.letter-page .english-horizon{font-size:24px;color:#fff}
+@media(min-width:1100px){.letter-page .english-horizon{font-size:28px}}
+
+/* Bring the agenda artwork and event heading closer together. */
+.agenda-page #agenda-title img{width:21%;min-width:130px}
+.agenda-page .agenda-content{margin-top:14px}
+@media(min-width:1100px){
+  .agenda-page .page-intro #agenda-title img{width:clamp(185px,20vw,290px);min-width:0}
+  .agenda-page .agenda-content{margin-top:0;padding-top:clamp(16px,2vw,28px)}
+}
+
+/* Match the golf-ball texture used by the program heading. */
+.golf-page .golf-title{ text-shadow:none }
+.golf-page .golf-title a{color:transparent;background-image:radial-gradient(ellipse at 58% 62%,#b6bec9 0 14%,#e9edf0 34%,transparent 58%),linear-gradient(#fff,#f4f7fa);background-size:14px 12px,100% 100%;background-clip:text;-webkit-background-clip:text;text-shadow:none;filter:drop-shadow(0 4px 0 #0739b3)}
+
+/* Golf registration: the course photo overlaps the shortened blue form area. */
+.golf-form-page{
+  min-height:0;
+  padding-bottom:0;
+  background:linear-gradient(180deg,#0825c5 0%,#1475ef 40%,#1688f3 100%);
+}
+.golf-form-page #golf-form{z-index:2}
+.golf-form-page .landscape{
+  position:relative;
+  z-index:1;
+  left:auto;
+  bottom:auto;
+  display:block;
+  width:calc(100% + 40px);
+  max-width:none;
+  height:clamp(290px,48cqw,430px);
+  max-height:none;
+  margin:-65px -20px 0;
+  object-fit:cover;
+  object-position:center bottom;
+  mask-image:linear-gradient(to bottom,transparent 0%,#000 24%);
+}
+@media(max-width:599px){
+  .golf-form-page .landscape{height:clamp(270px,76cqw,390px);margin-top:-52px;min-height:0}
 }
