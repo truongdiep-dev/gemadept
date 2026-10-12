@@ -548,7 +548,7 @@ h1,h2,h3,.gold-line,.home-nav .gold-button,.section-cta,.detail-button,
 .hotel-page.party-form-page .confirm-button{max-width:none;min-height:46px;margin:clamp(36px,4cqw,52px) auto 0;font-size:clamp(12px,1.25cqw,16px)}
 @media(max-width:599px){.party-form-page .registration-form{width:calc(100% - 20px)}.party-form-page .form-main-title{font-size:clamp(27px,6.2cqw,36px)}.party-form-page .registration-form label,.party-form-page .select-field,.party-form-page .date-field{font-size:14px}}
 
-.guest-page .form-main-title{font-weight:700;filter:none;background-image:linear-gradient(180deg,#f6d17c 0%,#fff1b8 18%,#ffe8a0 31%,#e4a351 44%,#f9d47a 70%,#edb45c 100%)}
+.guest-page .form-main-title{padding:.16em .06em .1em;font-weight:700;line-height:1.25;letter-spacing:.012em;filter:none;background-image:linear-gradient(180deg,#f6d17c 0%,#fff1b8 18%,#ffe8a0 31%,#e4a351 44%,#f9d47a 70%,#edb45c 100%)}
 .guest-page .form-main-english,.guest-page .form-subtitle em{font-weight:400}
 .registration-form input,.registration-form textarea,.registration-form .select-trigger,.registration-form .select-option,.registration-form .date-trigger,.registration-form .bilingual-placeholder{font-family:GothamVietnameseBook,Gotham,Arial,sans-serif;font-weight:400}
 .registration-form input::placeholder,.registration-form textarea::placeholder{font-family:GothamVietnameseBook,Gotham,Arial,sans-serif;font-weight:400}
