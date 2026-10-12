@@ -33,7 +33,7 @@
 .gold-line{display:block;width:max-content;max-width:100%;margin-inline:auto;padding-bottom:.22em}
 @supports (background-clip:text) or (-webkit-background-clip:text){
   .gold-text,.gold-line{
-    background-image:linear-gradient(180deg,#fff0b7 0%,#ffe7a4 38%,#f8d58c 66%,#efbd68 100%);
+    background-image:linear-gradient(180deg,#ffe9a9 0%,#ffdd8b 38%,#f7ca70 66%,#edb45d 100%);
     background-size:100% 100%;
     background-repeat:no-repeat;
     background-clip:text;
@@ -398,9 +398,6 @@ h1,h2,h3,.gold-line,.home-nav .gold-button,.section-cta,.detail-button,
 @media(min-width:1100px){.home-page{aspect-ratio:1440/1750;background-size:100% auto;background-position:center bottom}}
 
 .letter-page .horizon-art{width:min(90%,720px);margin:clamp(18px,2vw,28px) auto 8px}.letter-page .horizon-art img{display:block;width:100%;height:auto;margin:0 auto;filter:brightness(1.12) saturate(.78)}
-
-/* Trim isolated pixels left at the bottom of the extracted script artwork. */
-.activities-script{clip-path:inset(0 0 5% 0)}
 
 .letter-page .page-intro .anniversary,.agenda-page .page-intro .anniversary{width:30%;min-width:165px;margin:0 auto 12px}
 @media(min-width:1100px){.letter-page .page-intro .anniversary,.agenda-page .page-intro .anniversary{width:clamp(225px,24vw,350px);min-width:0;margin-bottom:16px}}
