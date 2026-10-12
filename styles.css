@@ -725,6 +725,8 @@ h1,h2,h3,.gold-line,.home-nav .gold-button,.section-cta,.detail-button,
 }
 @media(max-width:1099px){
   .letter-page{padding-bottom:80cqw}
+  .agenda-page{padding-bottom:65cqw}
+  .agenda-page::after{background-position:center calc(100% + 8cqw)}
   /* Both layers scale with page width: the crane tip in the mobile port
      artwork sits about 87cqw above its bottom. Overlap the map by 3cqw. */
   .letter-page>.ocean-map-art,.agenda-page>.ocean-map-art{
