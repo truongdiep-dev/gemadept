@@ -561,7 +561,7 @@ h1,h2,h3,.gold-line,.home-nav .gold-button,.section-cta,.detail-button,
   inset:auto 0 0;
   height:28%;
   pointer-events:none;
-  background:url('assets/images/home-port-mobile-labeled-2026.png') center 78%/100% auto no-repeat;
+  background:url('assets/images/home-port-mobile-labeled-2026.webp') center 78%/100% auto no-repeat;
   -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 12%);
   mask-image:linear-gradient(to bottom,transparent 0%,#000 12%);
 }
@@ -577,7 +577,7 @@ h1,h2,h3,.gold-line,.home-nav .gold-button,.section-cta,.detail-button,
 @media(min-width:1100px){
   .home-page::after{
     height:43%;
-    background-image:url('assets/images/home-port-desktop-labeled-2026.png');
+    background-image:url('assets/images/home-port-desktop-labeled-2026.webp');
     background-size:100% auto;
     -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 22%);
     mask-image:linear-gradient(to bottom,transparent 0%,#000 22%);
@@ -589,8 +589,8 @@ h1,h2,h3,.gold-line,.home-nav .gold-button,.section-cta,.detail-button,
 .party-title-image{display:block;width:100%;height:auto;margin:0 auto}
 .home-heading .image-title{width:73%;max-width:900px;margin:2% auto 0}
 .agenda-content .image-title{display:block;width:85%;max-width:680px;margin:0 auto 8px}
-.party-page .image-title{width:75%;max-width:860px;margin:0 auto}
-@media(min-width:1100px){.home-heading .image-title{width:59%;margin-top:14px}.party-page .image-title{width:64%}}
+.party-page .image-title{width:68%;max-width:780px;margin:0 auto}
+@media(min-width:1100px){.home-heading .image-title{width:59%;margin-top:14px}.party-page .image-title{width:58%}}
 
 /* Slightly larger English event heading on the homepage. */
 .home-eyebrow{font-size:clamp(12px,2.65cqw,19px)}
@@ -604,11 +604,11 @@ h1,h2,h3,.gold-line,.home-nav .gold-button,.section-cta,.detail-button,
 .activity-details-title-image{display:block;width:100%;height:auto;aspect-ratio:10/1;object-fit:cover;object-position:center;margin:0 auto}
 
 /* Transparent artwork for the guest attendance confirmation title. */
-.guest-page .attendance-image-title{width:86%;max-width:828px;margin-inline:auto;padding:0;background:none;filter:none;line-height:0}
+.guest-page .attendance-image-title{width:60%;max-width:580px;margin-inline:auto;padding:0;background:none;filter:none;line-height:0}
 .attendance-image-title img{display:block;width:100%;height:auto;aspect-ratio:7.5/1;object-fit:cover;object-position:center;margin:0 auto}
 
 /* Shared transparent artwork for both registration success pages. */
-.success-page .success-image-title{width:85%;max-width:850px;margin:0 auto;background:none;filter:none;line-height:0}
+.success-page .success-image-title{width:72%;max-width:720px;margin:0 auto;background:none;filter:none;line-height:0}
 .registration-success-title-image{display:block;width:100%;height:auto;margin:0 auto}
 
 /* Slightly larger white English theme in the open letter. */
@@ -652,3 +652,24 @@ h1,h2,h3,.gold-line,.home-nav .gold-button,.section-cta,.detail-button,
 @media(max-width:599px){
   .golf-form-page .landscape{height:clamp(270px,76cqw,390px);margin-top:-52px;min-height:0}
 }
+
+/* Larger party subtitle and attendance action. */
+.party-page .subtitle{font-size:clamp(17px,2.8cqw,28px)}
+.party-page .section-cta{width:clamp(260px,42cqw,360px);min-height:60px;padding:9px 18px;font-size:clamp(16px,2.4cqw,21px)}
+.party-page .section-cta strong{font-family:GothamContact,Gotham,Arial,sans-serif;font-weight:400}
+.party-page .section-cta small{font-size:clamp(10px,1.5cqw,13px)}
+
+/* Use the party CTA dimensions and typography on other section actions. */
+.page .section-cta{width:clamp(260px,42cqw,360px);min-width:0;max-width:100%;min-height:60px;padding:9px 18px;font-size:clamp(16px,2.4cqw,21px)}
+.page .section-cta small{font-size:clamp(10px,1.5cqw,13px)}
+
+/* Match the party CTA across activity, golf, letter and success pages. */
+.activities-page .detail-button,.page .section-cta{width:clamp(260px,42cqw,360px);min-width:0;max-width:100%;min-height:60px;font-size:clamp(16px,2.4cqw,21px)}
+.activities-page .detail-copy strong,.page .section-cta strong{font-family:GothamContact,Gotham,Arial,sans-serif;font-weight:400;font-size:inherit}
+.activities-page .detail-copy small,.page .section-cta small{font-size:clamp(10px,1.5cqw,13px)}
+.activities-page .detail-button>.detail-orb{width:clamp(42px,4cqw,52px)}
+
+/* Golf confirmation uses the same CTA dimensions and type as the party page. */
+.golf-page .section-cta{width:clamp(260px,42cqw,360px);min-width:0;max-width:100%;min-height:60px;padding:9px 18px;font-size:clamp(16px,2.4cqw,21px)}
+.golf-page .section-cta strong{font-family:GothamContact,Gotham,Arial,sans-serif;font-weight:400}
+.golf-page .section-cta small{font-size:clamp(10px,1.5cqw,13px)}
