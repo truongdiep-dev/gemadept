@@ -815,3 +815,56 @@ h1,h2,h3,.gold-line,.home-nav .gold-button,.section-cta,.detail-button,
   .agenda-page .event-facts{width:calc(100% + 8cqw);margin-right:-8cqw}
   .agenda-page .event-facts>div{grid-template-columns:27% minmax(0,1fr)}
 }
+@media(max-width:599px){
+  .agenda-page .agenda-content{width:calc(100% - 24px)}
+  .agenda-page .event-facts{width:100%;margin-right:0}
+  .agenda-page .event-facts>div{grid-template-columns:clamp(130px,35%,133px) minmax(0,1fr)}
+  .agenda-page .event-facts dt{padding-right:0;font-size:clamp(13px,3.6cqw,14px);letter-spacing:-.02em;white-space:nowrap}
+}
+
+/* iOS Safari clips the top of these tight display-font line boxes. */
+@media(max-width:599px){
+  .activities-page .activity>strong{line-height:1.35;padding:.2em 0 .1em;text-wrap:normal}
+  .golf-page .golf-title{line-height:1.15;text-wrap:normal}
+  .golf-page .golf-title a{
+    padding:.2em 0 .1em;
+    color:#fff;
+    -webkit-text-fill-color:#fff;
+    background:none;
+    -webkit-background-clip:initial;
+    background-clip:initial;
+    filter:none;
+    text-shadow:0 4px 0 #0739b3,0 1px 2px #fff9;
+  }
+  .golf-program-page .golf-title{
+    padding:.2em 0 .1em;
+    line-height:1.15;
+    color:#fff;
+    -webkit-text-fill-color:#fff;
+    background:none;
+    -webkit-background-clip:initial;
+    background-clip:initial;
+    filter:none;
+    text-shadow:0 4px 0 #0739b3,0 1px 2px #fff9;
+  }
+  .party-form-page .confirm-button,.golf-form-page .confirm-button{
+    min-height:46px;
+    padding:8px 6px;
+    font-size:clamp(10px,2.8cqw,12px);
+    letter-spacing:-.02em;
+    white-space:nowrap;
+  }
+}
+@media(hover:none) and (pointer:coarse) and (min-width:600px){
+  .activities-page .activity>strong{line-height:1.35;padding:.2em 0 .1em;text-wrap:normal}
+  .golf-page .golf-title,.golf-program-page .golf-title{line-height:1.15;text-wrap:normal}
+  .golf-page .golf-title a,.golf-program-page .golf-title{
+    color:#fff;
+    -webkit-text-fill-color:#fff;
+    background:none;
+    -webkit-background-clip:initial;
+    background-clip:initial;
+    filter:none;
+    text-shadow:0 4px 0 #0739b3,0 1px 2px #fff9;
+  }
+}
