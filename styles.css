@@ -960,6 +960,22 @@ h1,h2,h3,.gold-line,.home-nav .gold-button,.section-cta,.detail-button,
 
 .golf-contact .contact-email{display:inline-block;white-space:nowrap}
 
+/* Justify the letter text at every screen width. */
+.letter-page .letter-content p:not(.horizon-subtitle){text-align:justify;text-justify:inter-word;hyphens:auto}
+
+/* Keep the agenda facts readable and balance the program columns on phones. */
+@media(max-width:599px){
+  .agenda-page .event-date,.agenda-page .venue-street{display:block;white-space:nowrap}
+  .agenda-page .schedule{padding-inline:clamp(10px,3vw,18px)}
+  .agenda-page .schedule-row time{font-size:clamp(13px,3.5vw,14px);white-space:nowrap}
+  .agenda-page .schedule-row p{padding-left:18px}
+  .agenda-page .speech-translation{white-space:nowrap}
+  .letter-page .letter-content{width:calc(100% - 32px)}
+}
+@media(min-width:360px) and (max-width:599px){
+  .agenda-page .schedule-row{grid-template-columns:minmax(100px,32%) minmax(0,1fr)}
+}
+
 @media(max-width:600px){
   .golf-program-page .golf-schedule>div{
     grid-template-columns:clamp(100px,27cqw,112px) minmax(0,1fr);
