@@ -809,3 +809,9 @@ h1,h2,h3,.gold-line,.home-nav .gold-button,.section-cta,.detail-button,
   .party-form-page .next-button{min-height:48px;padding:8px 16px;font-size:14px}
   .party-form-page .confirm-button,.golf-form-page .confirm-button{min-height:50px;font-size:14px}
 }
+
+/* Give the agenda's bilingual time and venue details more line length. */
+@media(max-width:1099px){
+  .agenda-page .event-facts{width:calc(100% + 8cqw);margin-right:-8cqw}
+  .agenda-page .event-facts>div{grid-template-columns:27% minmax(0,1fr)}
+}
