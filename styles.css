@@ -897,6 +897,24 @@ h1,h2,h3,.gold-line,.home-nav .gold-button,.section-cta,.detail-button,
   .letter-page::after,.agenda-page::after{background-position:center calc(100% + 16cqw)}
 }
 
+/* Fit both event choices and the closing artwork in one desktop viewport. */
+@media(min-width:1100px){
+  .activities-page{display:grid;grid-template-columns:repeat(2,minmax(0,520px));grid-template-rows:auto auto minmax(0,1fr) auto;column-gap:clamp(28px,4vw,70px);justify-content:center;align-content:stretch;height:100dvh;min-height:0;padding:clamp(10px,2dvh,22px) 40px}
+  .activities-page .activities-branding,.activities-page h1,.activities-page .thanks{grid-column:1/-1}
+  .activities-page .activities-branding{margin-bottom:clamp(4px,1dvh,10px)}
+  .activities-page .activities-branding img{width:auto;height:clamp(60px,11dvh,110px);object-fit:contain}
+  .activities-page h1{margin-bottom:clamp(6px,1.5dvh,16px)}
+  .activities-page .activities-script{width:auto;height:clamp(55px,10dvh,100px);margin-bottom:0;object-fit:contain}
+  .activities-page .activity-headline{width:min(60vw,720px)}
+  .activities-page .activity-details-title-image{height:clamp(48px,7.5dvh,75px)}
+  .activities-page .activities-english{font-size:clamp(16px,2.5dvh,24px);margin-top:0}
+  .activities-page .activity,.activities-page .activity+.activity{width:100%;max-width:none;margin:0;align-self:center;font-size:clamp(15px,2dvh,20px)}
+  .activities-page .activity>img{width:min(90%,500px);height:min(31dvh,300px);margin-bottom:clamp(3px,.7dvh,8px)}
+  .activities-page .activity>strong{font-size:clamp(15px,2dvh,20px)}
+  .activities-page .detail-button{min-height:clamp(52px,6.5dvh,68px);margin-top:clamp(5px,1dvh,10px)}
+  .activities-page .thanks{width:min(46vw,55dvh,520px);margin:clamp(6px,1dvh,12px) auto 0}
+}
+
 /* Paint each golf title line separately so WebKit keeps the full glyphs. */
 .golf-page .golf-title,.golf-program-page .golf-title,
 .golf-page .golf-title a{
