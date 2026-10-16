@@ -427,7 +427,7 @@ h1,h2,h3,.gold-line,.home-nav .gold-button,.section-cta,.detail-button,
 .activities-page .detail-copy strong{display:block;min-height:0;margin:0;font-size:clamp(15px,1.45cqw,21px);line-height:1.05}
 .activities-page .detail-copy small{display:block;margin-top:2px;font-size:clamp(11px,1.08cqw,16px);font-weight:400;line-height:1.05}
 .activities-page .detail-button>.detail-orb{position:absolute;right:5px;top:50%;width:clamp(45px,4.3cqw,61px);height:auto;aspect-ratio:1;margin:0;transform:translateY(-50%);border:3px solid #ffbf6f;border-radius:50%;background:linear-gradient(135deg,#ffbc70,#f8873f);box-shadow:inset 0 2px 5px #fff8,0 2px 4px #a94f2199}
-.activities-page .thanks{grid-column:auto;max-width:900px;margin:clamp(52px,6cqw,90px) auto 0;font-size:clamp(18px,2.25cqw,32px);line-height:1.22}
+.activities-page .thanks{grid-column:auto;max-width:900px;margin:clamp(24px,3cqw,45px) auto 0;font-size:clamp(18px,2.25cqw,32px);line-height:1.22}
 @media(max-width:599px){.activities-branding{gap:14px}.activities-branding img:first-child{width:32%}.activities-branding img:last-child{width:38%}.activities-page h1{font-size:clamp(25px,6.3cqw,38px)}.activities-script{width:46%}.activities-page .activity,.activities-page .activity+.activity{width:100%}.activities-page .activity>img{width:65%}.activities-page .activity>strong{font-size:clamp(15px,4cqw,19px)}.activities-page .thanks{font-size:clamp(16px,4cqw,20px)}}
 
 /* The party detail page follows the centered invitation artwork. */
@@ -601,7 +601,7 @@ h1,h2,h3,.gold-line,.home-nav .gold-button,.section-cta,.detail-button,
 
 /* Transparent single-line activity details heading. */
 .activities-page .activity-headline{display:block;width:80%;max-width:940px;margin:0 auto;background:none;text-shadow:none;filter:none}
-.activity-details-title-image{display:block;width:100%;height:auto;aspect-ratio:10/1;object-fit:cover;object-position:center;margin:0 auto}
+.activity-details-title-image{display:block;width:100%;height:auto;aspect-ratio:7.5/1;object-fit:cover;object-position:center;margin:0 auto}
 
 /* Transparent artwork for the guest attendance confirmation title. */
 .guest-page .attendance-image-title{width:60%;max-width:580px;margin-inline:auto;padding:0;background:none;filter:none;line-height:0}
@@ -761,3 +761,34 @@ h1,h2,h3,.gold-line,.home-nav .gold-button,.section-cta,.detail-button,
 .activities-page .detail-button{min-height:clamp(64px,6cqw,78px)}
 .activities-page .detail-copy strong{line-height:1.2}
 .activities-page .detail-copy small{margin-top:5px;line-height:1.2}
+
+.activities-page .thanks{width:min(80%,640px)}
+.activities-page .thanks img{display:block;width:100%;height:auto}
+.activities-page .detail-copy small{font-size:clamp(16px,2cqw,19px)}
+/* Agenda artwork: shared sea blue and the two-column event facts. */
+.letter-page,.agenda-page{background:linear-gradient(180deg,#0121be 0%,#012bc2 22%,#033fcc 34%,#0457d7 48%,#0566de 62%,#0566de 100%)}
+.agenda-page .event-facts>div{display:grid;grid-template-columns:30% minmax(0,1fr)}
+.agenda-page .event-facts>div+div{border-top:1px solid rgba(255,255,255,.82)}
+.agenda-page .event-facts dt{padding:13px 12px 13px 0;white-space:nowrap;font-size:clamp(11px,2.2cqw,16px)}
+.agenda-page .event-facts dd{min-width:0;padding:13px 0 13px clamp(12px,3cqw,22px);border-left:1px solid rgba(255,255,255,.82)}
+@media(max-width:359px){.agenda-page .event-facts>div{display:block}.agenda-page .event-facts dt{padding-bottom:4px}.agenda-page .event-facts dd{padding:0 0 12px;border-left:0}}
+
+/* Preserve the artwork's warm sunset and deep port blues on both pages. */
+.letter-page::after,.agenda-page::after{
+  background-image:url('assets/images/home-port-mobile-labeled-2026.webp');
+  -webkit-mask-image:linear-gradient(transparent,#000 30%);
+  mask-image:linear-gradient(transparent,#000 30%);
+}
+.letter-page::before,.agenda-page::before{opacity:.12}
+@media(min-width:1100px){
+  .letter-page::after,.agenda-page::after{background-image:url('assets/images/home-port-desktop-labeled-2026.webp')}
+}
+
+/* The contact copy sits over a soft blue oval, leaving the sunset visible at the edges. */
+.agenda-page .contact{position:relative;isolation:isolate}
+.agenda-page .contact::before{
+  content:'';position:absolute;z-index:-1;pointer-events:none;
+  left:50%;top:-12px;width:130%;height:calc(100% + 90px);
+  transform:translateX(-50%);
+  background:radial-gradient(ellipse 50% 50% at center,rgba(4,88,204,.96) 0%,rgba(6,97,209,.8) 42%,rgba(10,107,213,.32) 68%,transparent 90%);
+}
