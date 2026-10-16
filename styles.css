@@ -921,3 +921,12 @@ h1,h2,h3,.gold-line,.home-nav .gold-button,.section-cta,.detail-button,
   -webkit-background-clip:text;
   filter:drop-shadow(0 4px 0 #0739b3);
 }
+
+.golf-contact .contact-email{display:inline-block;white-space:nowrap}
+
+@media(max-width:600px){
+  .golf-program-page .golf-schedule>div{
+    grid-template-columns:clamp(100px,27cqw,112px) minmax(0,1fr);
+    column-gap:8px;
+  }
+}
