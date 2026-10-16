@@ -915,6 +915,14 @@ h1,h2,h3,.gold-line,.home-nav .gold-button,.section-cta,.detail-button,
   .activities-page .thanks{width:min(46vw,55dvh,520px);margin:clamp(6px,1dvh,12px) auto 0}
 }
 
+/* Center the activity logos in equal spaces on desktop only. */
+@media(min-width:1100px){
+  .activities-page .activities-branding{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:center;justify-content:center;width:min(100%,660px);gap:clamp(8px,2.5cqw,28px)}
+  .activities-page .activities-branding img{justify-self:center;max-width:100%;object-fit:contain}
+  .activities-page .activities-branding img:first-child{width:min(72%,175px)}
+  .activities-page .activities-branding img:last-child{width:min(100%,260px)}
+}
+
 /* Fit the Golf landing page within one desktop viewport. */
 @media(min-width:1100px){
   .golf-page{height:100dvh;min-height:0;padding:clamp(35px,5dvh,80px) 20px 40px;justify-content:flex-start}
