@@ -896,3 +896,28 @@ h1,h2,h3,.gold-line,.home-nav .gold-button,.section-cta,.detail-button,
 @media(max-width:1099px){
   .letter-page::after,.agenda-page::after{background-position:center calc(100% + 16cqw)}
 }
+
+/* Paint each golf title line separately so WebKit keeps the full glyphs. */
+.golf-page .golf-title,.golf-program-page .golf-title,
+.golf-page .golf-title a{
+  color:#fff;
+  -webkit-text-fill-color:#fff;
+  background:none;
+  -webkit-background-clip:initial;
+  background-clip:initial;
+  filter:none;
+  text-shadow:none;
+}
+.golf-page .golf-title a{display:block;width:fit-content;max-width:100%;margin-inline:auto}
+.golf-title .golf-text-line{
+  display:block;width:max-content;max-width:100%;margin-inline:auto;
+  padding:.12em .04em .16em;
+  line-height:1.15;
+  color:transparent;
+  -webkit-text-fill-color:transparent;
+  background-image:radial-gradient(ellipse at 58% 62%,#b6bec9 0 14%,#e9edf0 34%,transparent 58%),linear-gradient(#fff,#f4f7fa);
+  background-size:14px 12px,100% 100%;
+  background-clip:text;
+  -webkit-background-clip:text;
+  filter:drop-shadow(0 4px 0 #0739b3);
+}
