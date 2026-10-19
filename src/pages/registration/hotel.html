@@ -1,0 +1,58 @@
+<section
+  class="page form-page hotel-page party-form-page"
+  data-page="dang-ky-tiec/3"
+  hidden
+  aria-labelledby="hotel-title"
+>
+  <!-- include: components/brand-pair.html {"className":"party-form-branding","anniversaryAlt":"36 năm Gemadept"} -->
+
+  <h1 id="hotel-title" class="form-subtitle">
+    <strong>THÔNG TIN KHÁCH SẠN</strong>
+    <em lang="en">Hotel arrangement</em>
+  </h1>
+  <form id="hotel-form" class="registration-form" data-step="hotel">
+    <p class="form-hint travel-hint">Để trống ngày lưu trú nếu bạn không cần hỗ trợ khách sạn.</p>
+    <label
+      >Ngày check in / <span lang="en">Check-in date</span>
+      <input type="date" name="checkIn" min="2026-01-01" max="2027-12-31" />
+    </label>
+    <label
+      >Ngày check out / <span lang="en">Check-out date</span>
+      <input type="date" name="checkOut" min="2026-01-01" max="2027-12-31" />
+    </label>
+    <h2 class="personal-title">THÔNG TIN CÁ NHÂN<em lang="en">Personal information</em></h2>
+    <label
+      >Số điện thoại / <span lang="en">Phone</span>
+      <span class="required">*</span>
+      <input
+        type="tel"
+        name="phone"
+        autocomplete="tel"
+        inputmode="tel"
+        placeholder="Số điện thoại / Phone number"
+        required
+        minlength="8"
+        maxlength="25"
+      />
+    </label>
+    <label>
+      <span lang="en">Email</span>
+      <span class="required">*</span>
+      <input
+        type="email"
+        name="email"
+        autocomplete="email"
+        placeholder="Email"
+        required
+        maxlength="160"
+      />
+    </label>
+    <p class="form-error" role="alert" hidden></p>
+    <button class="confirm-button" type="submit">
+      XÁC NHẬN THAM GIA / <span lang="en">CONFIRM ATTENDANCE</span>
+    </button>
+    <p class="form-hint privacy-note">
+      Thông tin được gửi đến Ban tổ chức để xác nhận và hỗ trợ chuyến đi của bạn.
+    </p>
+  </form>
+</section>

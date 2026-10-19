@@ -1,0 +1,141 @@
+.party-page {
+  text-align: center;
+  padding-top: 15%;
+}
+.party-page h1 {
+  font-size: clamp(28px, 5.45cqw, 42px);
+  line-height: 1.12;
+  margin-bottom: 14px;
+}
+.party-page .section-cta {
+  margin-top: 45px;
+}
+@media (max-width: 480px) {
+  .party-page {
+    padding-top: 100px;
+  }
+}
+.party-page h1 {
+  font-size: clamp(31px, 6cqw, 46px);
+}
+@media (min-width: 1100px) {
+  .party-page {
+    min-height: max(760px, 100dvh);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 100px clamp(55px, 7vw, 125px);
+    text-align: left;
+    isolation: isolate;
+  }
+  .party-page:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0 0 0 auto;
+    width: 54%;
+    background: url('assets/images/port-sea-2026.webp') center/cover no-repeat;
+    mask-image: linear-gradient(90deg, transparent, #000 29%);
+  }
+  .party-page h1 {
+    font-size: clamp(52px, 5vw, 78px);
+    line-height: 1.08;
+  }
+  .party-page .subtitle {
+    text-align: left;
+    font-size: 19px;
+  }
+  .party-page .section-cta {
+    margin: 50px 0 0;
+  }
+  .party-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100dvh;
+    padding: clamp(75px, 9vh, 140px) 24px 80px;
+    text-align: center;
+    background: linear-gradient(180deg, #0828c7 0%, #0e75f4 36%, #0e75f4 72%, #0934cc 100%);
+  }
+  .party-page::before {
+    content: none;
+  }
+  .party-page h1 {
+    font-size: clamp(48px, 4.5vw, 72px);
+    line-height: 1.08;
+    text-align: center;
+  }
+  .party-page .subtitle {
+    text-align: center;
+    font-size: clamp(15px, 1.2vw, 19px);
+    margin-top: 18px;
+  }
+  .party-page .section-cta {
+    margin: 42px auto 0;
+  }
+}
+.party-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100dvh;
+  padding: clamp(35px, 5cqw, 80px) 20px 80px;
+  text-align: center;
+  background: linear-gradient(180deg, #071fc2 0%, #0f6cf0 42%, #1180f8 64%, #0927c6 100%);
+  isolation: isolate;
+}
+.party-page::before {
+  content: none;
+}
+.party-page h1 {
+  margin: 0 auto;
+  font-size: clamp(30px, 5.5cqw, 72px);
+  font-weight: 700;
+  line-height: 1.07;
+  filter: none;
+}
+.party-page .subtitle {
+  margin: 2px auto 0;
+  font-size: clamp(13px, 2.2cqw, 22px);
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+.party-page .section-cta {
+  margin: clamp(36px, 4cqw, 56px) auto 0;
+}
+.party-page .section-cta small {
+  white-space: nowrap;
+}
+.party-page .image-title {
+  width: 68%;
+  max-width: 780px;
+  margin: 0 auto;
+}
+@media (min-width: 1100px) {
+  .party-page .image-title {
+    width: 58%;
+  }
+}
+.party-page .subtitle {
+  font-size: clamp(17px, 2.8cqw, 28px);
+}
+.party-page .section-cta {
+  padding: 9px 18px;
+}
+.party-page .section-cta strong {
+  font-family: GothamContact, Gotham, Arial, sans-serif;
+  font-weight: 400;
+}
+.party-page .subtitle {
+  margin-top: 8px;
+  line-height: 1.3;
+}
+@media (max-width: 599px) {
+  .party-page .image-title {
+    width: 80%;
+  }
+}

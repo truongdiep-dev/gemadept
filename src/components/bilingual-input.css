@@ -1,0 +1,32 @@
+.registration-form .bilingual-input {
+  display: block;
+  position: relative;
+  margin-top: 9px;
+}
+.registration-form .bilingual-input input {
+  margin-top: 0;
+}
+.registration-form .bilingual-input input::placeholder {
+  color: transparent;
+}
+.registration-form .bilingual-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  color: #677b8d;
+  font-size: 14px;
+  line-height: 1.2;
+  pointer-events: none;
+  white-space: nowrap;
+  max-width: calc(100% - 28px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.registration-form .bilingual-input input:not(:placeholder-shown) + .bilingual-placeholder {
+  display: none;
+}
+.registration-form .bilingual-placeholder {
+  font-family: GothamVietnameseBook, Gotham, Arial, sans-serif;
+  font-weight: 400;
+}

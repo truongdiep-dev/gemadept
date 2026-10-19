@@ -1,0 +1,217 @@
+.form-page {
+  padding-bottom: 70px;
+}
+.form-subtitle {
+  text-align: center;
+  font-size: clamp(19px, 3cqw, 24px);
+  line-height: 1.2;
+  margin: 36px 20px 26px;
+  font-weight: 400;
+}
+.form-subtitle em {
+  display: block;
+  font-size: 0.92em;
+  font-weight: 400;
+  margin-top: 4px;
+}
+.registration-form {
+  width: 68%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.registration-form label {
+  display: block;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.25;
+  margin-bottom: 24px;
+}
+.registration-form input,
+.registration-form select,
+.registration-form textarea {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  margin-top: 8px;
+  padding: 11px 13px;
+  border: 1px solid #d9e4eb;
+  border-radius: 5px;
+  background: #fff;
+  color: #163561;
+  font-size: 16px;
+  box-shadow: 0 1px 1px #062a781a;
+}
+.registration-form input::placeholder,
+.registration-form textarea::placeholder {
+  color: #677b8d;
+  font-size: 14px;
+  opacity: 1;
+}
+.registration-form select {
+  padding-right: 8px;
+}
+.registration-form textarea {
+  resize: vertical;
+  min-height: 105px;
+}
+.required {
+  color: #fff2be;
+}
+.form-hint {
+  font-size: 13px;
+  line-height: 1.4;
+  color: #fff;
+  margin-top: -7px;
+}
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 26px;
+}
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+legend {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 17px;
+  margin: 15px 0 18px;
+  padding: 0;
+}
+legend em {
+  display: block;
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 3px;
+}
+.travel-hint {
+  text-align: center;
+  margin: 0 0 22px;
+  color: #f1f6ff;
+}
+.privacy-note {
+  text-align: center;
+  margin: 16px 0 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.form-error {
+  padding: 12px 14px;
+  background: #fff4eb;
+  color: #8f210b;
+  border-left: 4px solid #ed7332;
+  border-radius: 4px;
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 18px 0;
+}
+@media (max-width: 480px) {
+  .registration-form {
+    width: 82%;
+  }
+  .form-subtitle {
+    font-size: 19px;
+    margin-top: 25px;
+  }
+  .registration-form label {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+}
+.registration-form {
+  max-width: 600px;
+}
+.registration-form input,
+.registration-form select,
+.registration-form textarea {
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  .registration-form {
+    width: min(72%, 600px);
+  }
+}
+@media (min-width: 1024px) {
+  .registration-form {
+    width: min(70%, 600px);
+  }
+}
+@media (min-width: 600px) and (max-width: 767px) {
+  .registration-form {
+    width: 70%;
+  }
+}
+@media (max-width: 599px) {
+  .registration-form {
+    width: calc(100% - 40px);
+  }
+  .registration-form label {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+  .form-hint,
+  .privacy-note {
+    font-size: 13px;
+  }
+}
+@media (max-width: 359px) {
+  .registration-form {
+    width: calc(100% - 32px);
+  }
+}
+@media (min-width: 1100px) {
+  .form-page {
+    padding: 68px clamp(45px, 6vw, 100px) 90px;
+  }
+  .form-subtitle {
+    font-size: clamp(23px, 2.2vw, 31px);
+    margin: 22px auto 24px;
+  }
+  .registration-form {
+    width: min(100%, 1100px);
+    max-width: 1100px;
+  }
+  .registration-form label {
+    font-size: 17px;
+  }
+  .registration-form input,
+  .registration-form select,
+  .registration-form textarea {
+    min-height: 48px;
+    font-size: 17px;
+  }
+  .privacy-note {
+    font-size: 14px;
+  }
+}
+.form-subtitle {
+  text-wrap: balance;
+}
+.registration-form label {
+  text-wrap: pretty;
+}
+.registration-form input,
+.registration-form textarea {
+  font-family: GothamVietnameseBook, Gotham, Arial, sans-serif;
+  font-weight: 400;
+}
+.registration-form input::placeholder,
+.registration-form textarea::placeholder {
+  font-family: GothamVietnameseBook, Gotham, Arial, sans-serif;
+  font-weight: 400;
+}
+.form-subtitle strong {
+  display: block;
+  line-height: 1.3;
+}
+.form-subtitle em {
+  margin-top: 7px;
+  line-height: 1.35;
+}

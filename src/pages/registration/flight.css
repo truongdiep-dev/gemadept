@@ -1,0 +1,55 @@
+.flight-page .form-subtitle {
+  margin-top: 26px;
+}
+@media (max-width: 480px) {
+  .flight-page {
+  }
+}
+@media (min-width: 1100px) {
+  #flight-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(28px, 4vw, 70px);
+    align-items: start;
+  }
+  #flight-form .travel-hint,
+  #flight-form .form-actions {
+    grid-column: 1/-1;
+  }
+  #flight-form fieldset {
+    width: 100%;
+  }
+  #flight-form .form-actions {
+    margin-top: 16px;
+  }
+}
+#flight-form {
+  display: block;
+  grid-template-columns: none;
+}
+.flight-page.party-form-page .form-subtitle {
+  margin-top: 0;
+}
+.flight-page.party-form-page .form-subtitle strong,
+.flight-page.party-form-page legend {
+  font-weight: 400;
+}
+.flight-page.party-form-page .registration-form {
+  margin-top: clamp(23px, 3cqw, 38px);
+}
+.flight-page.party-form-page fieldset + fieldset {
+  margin-top: clamp(16px, 2cqw, 26px);
+}
+.flight-page.party-form-page legend {
+  margin: 0 0 clamp(16px, 2cqw, 25px);
+  font-size: clamp(16px, 1.8cqw, 22px);
+  line-height: 1.2;
+}
+.flight-page.party-form-page legend em {
+  margin-top: 3px;
+  font-size: 0.8em;
+  font-weight: 400;
+}
+.flight-page.party-form-page legend em {
+  margin-top: 7px;
+}

@@ -1,0 +1,94 @@
+.success-brands {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+  margin: 0 auto 40px;
+}
+.success-brands img:first-child {
+  width: 40%;
+}
+.success-brands img:last-child {
+  width: 56%;
+}
+@media (max-width: 480px) {
+  .success-brands {
+    width: 65%;
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 1100px) {
+  .success-brands {
+    width: min(100%, 480px);
+    margin: 0 auto clamp(28px, 4vh, 45px);
+    gap: clamp(16px, 2vw, 28px);
+  }
+}
+.activities-branding {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(18px, 4cqw, 65px);
+  width: 100%;
+  margin: 0 auto clamp(8px, 1.5cqw, 22px);
+}
+.activities-branding img:first-child {
+  width: clamp(125px, 16cqw, 225px);
+}
+.activities-branding img:last-child {
+  width: clamp(145px, 19cqw, 260px);
+}
+@media (max-width: 599px) {
+  .activities-branding {
+    gap: 14px;
+  }
+  .activities-branding img:first-child {
+    width: 32%;
+  }
+  .activities-branding img:last-child {
+    width: 38%;
+  }
+}
+.party-branding {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(15px, 3cqw, 40px);
+  width: 100%;
+  margin: 0 auto clamp(25px, 3cqw, 45px);
+}
+.party-branding img:first-child {
+  width: clamp(100px, 14cqw, 180px);
+}
+.party-branding img:last-child {
+  width: clamp(130px, 19cqw, 230px);
+}
+.party-form-branding {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(14px, 3cqw, 38px);
+  width: 100%;
+  margin: 0 auto clamp(22px, 3cqw, 38px);
+}
+.party-form-branding img:first-child {
+  width: clamp(100px, 14cqw, 180px);
+}
+.party-form-branding img:last-child {
+  width: clamp(130px, 19cqw, 230px);
+}
+.golf-form-branding {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(14px, 3cqw, 38px);
+  width: 100%;
+  margin: 0 auto clamp(20px, 3cqw, 34px);
+}
+.golf-form-branding img:first-child {
+  width: clamp(100px, 14cqw, 180px);
+}
+.golf-form-branding img:last-child {
+  width: clamp(130px, 19cqw, 230px);
+}

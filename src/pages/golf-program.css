@@ -1,0 +1,440 @@
+.golf-header {
+  width: 100%;
+  margin-top: -1px;
+}
+.golf-program-page {
+  padding-bottom: 0;
+  background: #0e75f4;
+}
+.golf-program-content {
+  width: 78%;
+  margin: 40px auto 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.golf-program-content h2 {
+  font-size: 20px;
+  margin-top: 28px;
+}
+.golf-program-content p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+.golf-schedule {
+  text-align: left;
+  font-size: 15px;
+  line-height: 1.4;
+  margin-top: 25px;
+}
+.golf-schedule > div {
+  display: grid;
+  grid-template-columns: 28% 72%;
+  margin: 17px 0;
+  gap: 10px;
+}
+.golf-schedule dt {
+  font-weight: 700;
+}
+.golf-schedule dd {
+  margin: 0;
+}
+.golf-contact {
+  width: 84%;
+  margin: 50px auto 0;
+}
+.golf-program-page .landscape {
+  margin-top: 0;
+}
+.golf-program-page .section-cta {
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 480px) {
+  .golf-program-content {
+    width: 85%;
+    margin-top: 33px;
+  }
+  .golf-schedule {
+    font-size: 14px;
+  }
+  .golf-schedule > div {
+    grid-template-columns: 30% 70%;
+    gap: 4px;
+  }
+  .golf-contact {
+    font-size: 13px;
+  }
+  .golf-program-page {
+    padding-bottom: 0;
+  }
+}
+.golf-program-content {
+  max-width: 680px;
+}
+.golf-contact,
+.golf-schedule dd {
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 768px) {
+  .golf-program-content {
+    width: min(78%, 680px);
+  }
+}
+@media (min-width: 1024px) {
+  .golf-program-content {
+    width: min(75%, 680px);
+  }
+}
+@media (max-width: 599px) {
+  .golf-program-content {
+    width: calc(100% - 40px);
+  }
+  .golf-program-content h2 {
+    font-size: 19px;
+  }
+  .golf-program-content p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 359px) {
+  .golf-schedule > div {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .golf-schedule dt {
+    margin-bottom: 3px;
+  }
+  .golf-program-content {
+    width: calc(100% - 32px);
+  }
+}
+@media (min-width: 1100px) {
+  .golf-program-page {
+    min-height: max(760px, 100dvh);
+    padding: 0 0 80px;
+    background: #0e75f4;
+    text-align: center;
+  }
+  .golf-program-page .golf-header {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    border-radius: 0;
+    margin: 0 auto;
+  }
+  .golf-program-page .golf-title {
+    font-size: clamp(48px, 4.3vw, 68px);
+    line-height: 1.05;
+    margin: clamp(28px, 4vh, 50px) auto 0;
+    text-align: center;
+  }
+
+  .golf-program-page {
+    padding-bottom: 0;
+  }
+  .golf-program-page .golf-title {
+    margin-top: 26px;
+  }
+  .golf-program-content {
+    width: min(100% - 100px, 1120px);
+    max-width: 1120px;
+    display: grid;
+    grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+    gap: clamp(30px, 5vw, 80px);
+    text-align: left;
+    margin: 55px auto 0;
+  }
+  .golf-program-content h2 {
+    margin: 0 0 10px;
+    font-size: 23px;
+  }
+  .golf-facts h2:not(:first-child) {
+    margin-top: 38px;
+  }
+  .golf-program-content p {
+    font-size: 18px;
+  }
+  .golf-schedule {
+    font-size: 17px;
+    margin-top: 18px;
+  }
+  .golf-itinerary > h2:last-child {
+    margin-top: 35px;
+  }
+  .golf-contact {
+    width: min(100% - 100px, 900px);
+    font-size: 17px;
+    margin: 55px auto 0;
+  }
+  .golf-program-page .section-cta {
+    margin: 34px auto 0;
+  }
+  .golf-program-page .landscape {
+    display: block;
+    width: 100%;
+    height: clamp(320px, 32vw, 580px);
+    max-height: none;
+    object-fit: cover;
+    object-position: center 60%;
+    margin: 55px 0 0;
+  }
+}
+.golf-schedule dt,
+.golf-schedule dd {
+  text-wrap: balance;
+}
+.golf-program-content p {
+  text-wrap: pretty;
+}
+@media (max-width: 1099px) {
+  .golf-program-page .golf-header {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 0;
+    margin: 0 auto;
+  }
+}
+.golf-thanks {
+  width: min(100% - 32px, 1120px);
+  margin: clamp(34px, 4vw, 58px) auto 0;
+  text-align: center;
+  font-size: clamp(20px, 2vw, 27px);
+  line-height: 1.2;
+  text-wrap: balance;
+}
+.golf-program-page .golf-contact {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: clamp(25px, 4vw, 55px);
+  transform: translateX(-50%);
+  width: min(100% - 32px, 940px);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  color: #064b9e;
+  text-align: center;
+  font-size: clamp(15px, 1.3vw, 18px);
+  line-height: 1.4;
+  text-shadow: 0 1px 2px #fff;
+}
+.golf-program-page .golf-contact em,
+.golf-program-page .golf-contact a {
+  color: #1354a8;
+}
+.golf-program-page .golf-header {
+  clip-path: ellipse(51% 100% at 50% 0);
+  background: #0e75f4;
+}
+
+.golf-program-page .golf-landscape-wrap {
+  position: relative;
+  margin-top: clamp(30px, 4vw, 55px);
+}
+.golf-program-page .golf-landscape-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0 0 55%;
+  background: linear-gradient(#ffffffe6, transparent);
+  pointer-events: none;
+}
+.golf-program-page .golf-landscape-wrap .landscape {
+  margin: 0;
+}
+@media (max-width: 600px) {
+  .golf-program-page .golf-landscape-wrap .landscape {
+    height: 340px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .golf-program-page .golf-contact {
+    top: 18px;
+    font-size: 13px;
+  }
+}
+.golf-program-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100dvh;
+  padding: 0;
+  background: linear-gradient(180deg, #0730c3 0%, #0d64e8 26%, #117cf5 72%, #0d68e7 100%);
+  text-align: center;
+}
+.golf-program-page .golf-header {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  margin: 0;
+  clip-path: none;
+  background: none;
+}
+.golf-program-page .golf-header {
+  clip-path: ellipse(50% 100% at 50% 0);
+}
+.golf-program-anniversary {
+  display: block;
+  width: clamp(130px, 22cqw, 210px);
+  height: auto;
+  margin: clamp(8px, 1.5cqw, 20px) auto 0;
+}
+.golf-program-page .golf-title {
+  margin: clamp(8px, 1.5cqw, 18px) auto 0;
+  font-size: clamp(31px, 5.2cqw, 56px);
+  line-height: 1;
+}
+.golf-program-page .golf-title {
+  color: transparent;
+  background-image:
+    radial-gradient(ellipse at 58% 62%, #b6bec9 0 14%, #e9edf0 34%, transparent 58%),
+    linear-gradient(#fff, #f4f7fa);
+  background-size:
+    14px 12px,
+    100% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-shadow: none;
+  filter: drop-shadow(0 4px 0 #0739b3);
+}
+.golf-program-page .golf-program-content {
+  display: block;
+  width: min(82%, 720px);
+  max-width: 720px;
+  margin: clamp(28px, 4cqw, 48px) auto 0;
+  text-align: center;
+}
+.golf-program-page .golf-program-content h2 {
+  margin: 0;
+  font-size: clamp(16px, 2cqw, 21px);
+  line-height: 1.25;
+}
+.golf-program-page .golf-program-content p {
+  margin: 3px 0 0;
+  font-size: clamp(12px, 1.55cqw, 16px);
+}
+.golf-program-page .golf-facts h2:not(:first-child) {
+  margin: clamp(19px, 3cqw, 31px) 0 0;
+}
+.golf-program-page .golf-itinerary {
+  margin-top: clamp(22px, 3.5cqw, 36px);
+}
+.golf-program-page .golf-schedule {
+  margin: clamp(12px, 2cqw, 22px) 0 0;
+  font-size: clamp(12px, 1.6cqw, 16px);
+  line-height: 1.4;
+  text-align: left;
+}
+.golf-program-page .golf-schedule > div {
+  display: grid;
+  grid-template-columns: 24% minmax(0, 1fr);
+  gap: 12px;
+  margin: clamp(9px, 1.4cqw, 15px) 0;
+}
+.golf-program-page .golf-schedule dt {
+  white-space: nowrap;
+}
+.golf-program-page .golf-thanks {
+  width: min(90%, 720px);
+  margin: clamp(20px, 3.5cqw, 36px) auto 0;
+  font-size: clamp(16px, 2cqw, 22px);
+}
+.golf-program-page .golf-contact {
+  position: static;
+  transform: none;
+  width: min(90%, 720px);
+  margin: clamp(30px, 5cqw, 55px) auto 0;
+  color: #fff;
+  font-size: clamp(12px, 1.55cqw, 16px);
+  line-height: 1.55;
+  text-shadow: none;
+}
+.golf-program-page .golf-contact em,
+.golf-program-page .golf-contact a {
+  color: #fff;
+}
+.golf-program-page .golf-landscape-wrap {
+  width: 100%;
+  margin: clamp(22px, 3cqw, 35px) 0 0;
+}
+.golf-program-page .golf-landscape-wrap::after {
+  display: none;
+}
+.golf-program-page .golf-landscape-wrap .landscape {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: cover;
+  mask-image: linear-gradient(transparent 0%, #000 31%);
+}
+@media (max-width: 600px) {
+  .golf-program-page .golf-schedule > div {
+    grid-template-columns: 25% minmax(0, 1fr);
+    gap: 8px;
+  }
+  .golf-program-page .golf-landscape-wrap .landscape {
+    height: auto;
+    object-fit: cover;
+  }
+}
+@media (max-width: 599px) {
+  .golf-program-page .golf-title {
+    padding: 0.2em 0 0.1em;
+    line-height: 1.15;
+    color: #fff;
+    -webkit-text-fill-color: #fff;
+    background: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    filter: none;
+    text-shadow:
+      0 4px 0 #0739b3,
+      0 1px 2px #fff9;
+  }
+}
+@media (hover: none) and (pointer: coarse) and (min-width: 600px) {
+  .golf-program-page .golf-title {
+    line-height: 1.15;
+    text-wrap: normal;
+  }
+  .golf-program-page .golf-title {
+    color: #fff;
+    -webkit-text-fill-color: #fff;
+    background: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    filter: none;
+    text-shadow:
+      0 4px 0 #0739b3,
+      0 1px 2px #fff9;
+  }
+}
+.golf-program-page .golf-title {
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+  background: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  filter: none;
+  text-shadow: none;
+}
+
+.golf-contact .contact-email {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .golf-program-page .golf-schedule > div {
+    grid-template-columns: clamp(100px, 27cqw, 112px) minmax(0, 1fr);
+    column-gap: 8px;
+  }
+}

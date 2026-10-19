@@ -1,0 +1,35 @@
+.golf-title {
+  text-align: center;
+  font-size: clamp(29px, 5.8cqw, 44px);
+  line-height: 1.02;
+  color: #fff;
+  letter-spacing: 0.02em;
+  text-shadow:
+    0 4px 0 #0739b3,
+    0 1px 3px #fff7;
+  margin: 35px 12px 0;
+}
+@media (max-width: 480px) {
+  .golf-title {
+    margin-top: 28px;
+  }
+}
+.golf-title .golf-text-line {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  margin-inline: auto;
+  padding: 0.12em 0.04em 0.16em;
+  line-height: 1.15;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-image:
+    radial-gradient(ellipse at 58% 62%, #b6bec9 0 14%, #e9edf0 34%, transparent 58%),
+    linear-gradient(#fff, #f4f7fa);
+  background-size:
+    14px 12px,
+    100% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  filter: drop-shadow(0 4px 0 #0739b3);
+}

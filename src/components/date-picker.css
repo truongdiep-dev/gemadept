@@ -1,0 +1,177 @@
+.registration-form .date-field {
+  position: relative;
+  min-width: 0;
+  margin-bottom: 24px;
+  font-size: clamp(15px, 1.3vw, 17px);
+  line-height: 1.25;
+}
+.date-label {
+  display: block;
+  color: #fff;
+}
+.registration-form .custom-native-date {
+  display: none;
+}
+.date-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-height: 48px;
+  margin-top: 8px;
+  padding: 10px 14px;
+  border: 1px solid #d9e4eb;
+  border-radius: 6px;
+  background: #fff;
+  color: #163561;
+  font-size: 16px;
+  text-align: left;
+  box-shadow: 0 1px 1px #062a781a;
+}
+.date-trigger.is-placeholder {
+  color: #677b8d;
+}
+.date-trigger:after {
+  content: '▦';
+  flex: none;
+  color: #174d9d;
+  font-size: 23px;
+  line-height: 1;
+}
+.date-field.is-open .date-trigger {
+  border-color: #ffdc79;
+  box-shadow: 0 0 0 3px #ffdc7955;
+}
+.date-panel {
+  position: absolute;
+  z-index: 60;
+  top: calc(100% + 5px);
+  left: 0;
+  width: min(340px, calc(100vw - 40px));
+  padding: 14px;
+  border: 1px solid #ffe19a;
+  border-radius: 12px;
+  background: #fff;
+  color: #163561;
+  box-shadow: 0 14px 32px #001b6e66;
+}
+.date-panel[hidden] {
+  display: none;
+}
+.date-field.open-up .date-panel {
+  top: auto;
+  bottom: calc(100% + 5px);
+}
+.date-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.date-month {
+  font-size: 17px;
+  text-transform: capitalize;
+  color: #073da8;
+}
+.date-nav {
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 8px;
+  background: #e8f1ff;
+  color: #073da8;
+  font-size: 27px;
+  line-height: 1;
+}
+.date-nav:hover:not(:disabled) {
+  background: #d4e6ff;
+}
+.date-nav:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+.date-weekdays,
+.date-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 3px;
+  text-align: center;
+}
+.date-weekdays {
+  margin-bottom: 5px;
+  color: #416393;
+  font-size: 12px;
+  font-weight: 700;
+}
+.date-weekdays span {
+  padding: 5px 0;
+}
+.date-day {
+  aspect-ratio: 1;
+  min-width: 0;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #163561;
+  font-size: 14px;
+}
+.date-day:hover:not(:disabled),
+.date-day:focus-visible {
+  background: #e7f0ff;
+  outline: 2px solid #ffdc79;
+  outline-offset: -2px;
+}
+.date-day[aria-pressed='true'] {
+  background: #0c5fe6;
+  color: #fff;
+  font-weight: 700;
+}
+.date-day.is-today:not([aria-pressed='true']) {
+  box-shadow: inset 0 0 0 1px #0c5fe6;
+}
+.date-day:disabled {
+  opacity: 0.28;
+  cursor: default;
+}
+.date-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #dce8f9;
+}
+.date-footer button {
+  min-height: 32px;
+  padding: 5px 9px;
+  border: 0;
+  border-radius: 6px;
+  background: #e8f1ff;
+  color: #073da8;
+  font-size: 13px;
+  font-weight: 700;
+}
+.registration-form .date-error {
+  grid-column: 1/-1;
+  margin: 0 0 18px;
+}
+@media (max-width: 599px) {
+  .registration-form .date-field {
+    font-size: 16px;
+  }
+  .date-trigger {
+    min-height: 44px;
+  }
+}
+.date-label,
+.date-trigger {
+  text-wrap: balance;
+}
+.registration-form .date-field {
+  text-wrap: pretty;
+}
+.registration-form .date-trigger {
+  font-family: GothamVietnameseBook, Gotham, Arial, sans-serif;
+  font-weight: 400;
+}

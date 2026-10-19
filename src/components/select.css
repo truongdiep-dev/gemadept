@@ -1,0 +1,118 @@
+.registration-form .select-field {
+  position: relative;
+  min-width: 0;
+  margin-bottom: 24px;
+  font-size: clamp(15px, 1.3vw, 17px);
+  line-height: 1.25;
+}
+.select-label {
+  display: block;
+  color: #fff;
+}
+.registration-form .custom-native-select {
+  display: none;
+}
+.select-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-height: 48px;
+  margin-top: 8px;
+  padding: 10px 14px;
+  border: 1px solid #d9e4eb;
+  border-radius: 6px;
+  background: #fff;
+  color: #163561;
+  font-size: 16px;
+  text-align: left;
+  box-shadow: 0 1px 1px #062a781a;
+}
+.select-trigger:after {
+  content: '';
+  flex: none;
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid #174d9d;
+  border-bottom: 2px solid #174d9d;
+  transform: rotate(45deg) translateY(-3px);
+  transition: transform 0.16s;
+}
+.select-field.is-open .select-trigger {
+  border-color: #ffdc79;
+  box-shadow: 0 0 0 3px #ffdc7955;
+}
+.select-field.is-open .select-trigger:after {
+  transform: rotate(225deg) translate(-2px, -2px);
+}
+.select-options {
+  position: absolute;
+  z-index: 50;
+  top: calc(100% + 5px);
+  left: 0;
+  right: 0;
+  max-height: min(320px, 50dvh);
+  overflow: auto;
+  padding: 5px;
+  border: 1px solid #ffe19a;
+  border-radius: 9px;
+  background: #fff;
+  box-shadow: 0 14px 32px #001b6e66;
+  overscroll-behavior: contain;
+}
+.select-options[hidden] {
+  display: none;
+}
+.select-field.open-up .select-options {
+  top: auto;
+  bottom: calc(100% + 5px);
+}
+.select-option {
+  display: block;
+  width: 100%;
+  min-height: 42px;
+  padding: 9px 12px;
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  color: #163561;
+  font-size: 15px;
+  line-height: 1.3;
+  text-align: left;
+}
+.select-option:hover,
+.select-option:focus-visible {
+  background: #e7f0ff;
+  color: #073da8;
+  outline: none;
+}
+.select-option[aria-selected='true'] {
+  background: #d9e9ff;
+  color: #073da8;
+  font-weight: 700;
+}
+@media (max-width: 599px) {
+  .registration-form .select-field {
+    font-size: 16px;
+  }
+  .select-trigger {
+    min-height: 44px;
+  }
+}
+.select-label,
+.select-trigger,
+.select-option {
+  text-wrap: balance;
+}
+.registration-form .select-field {
+  text-wrap: pretty;
+}
+.registration-form .select-trigger,
+.registration-form .select-option {
+  font-family: GothamVietnameseBook, Gotham, Arial, sans-serif;
+  font-weight: 400;
+}
+.registration-form .select-option[aria-selected='true'] {
+  font-weight: 400;
+}

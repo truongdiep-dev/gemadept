@@ -1,0 +1,203 @@
+.golf-form-page {
+  padding: 65px 0 0;
+  background: #2088ed;
+}
+.golf-form-page .form-subtitle {
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+.golf-form-page .landscape {
+  margin-top: -7%;
+  z-index: 0;
+}
+.golf-form-page .registration-form {
+  z-index: 1;
+}
+.golf-form-page .registration-form label {
+  margin-bottom: 20px;
+}
+@media (max-width: 480px) {
+  .golf-form-page {
+    padding-top: 62px;
+    padding-bottom: 0;
+  }
+  .golf-form-page .landscape {
+    margin-top: 0;
+  }
+  .golf-form-page .privacy-note {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.golf-form-page .landscape {
+  margin-top: clamp(20px, 4cqw, 48px);
+}
+
+@media (min-width: 768px) {
+  .golf-form-page .landscape {
+    max-height: 490px;
+    object-fit: cover;
+    object-position: bottom;
+  }
+}
+@media (max-width: 599px) {
+  .golf-form-page .landscape {
+    margin-top: 26px;
+  }
+}
+@media (min-width: 1100px) {
+  #golf-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(28px, 4vw, 70px);
+    align-items: start;
+  }
+  #golf-form .form-error,
+  #golf-form .confirm-button,
+  #golf-form .privacy-note {
+    grid-column: 1/-1;
+  }
+  .golf-form-page {
+    padding: 68px 0 0;
+  }
+  .golf-form-page .landscape {
+    display: block;
+    width: 100%;
+    max-height: 340px;
+    object-fit: cover;
+    object-position: bottom;
+    margin: 35px 0 0;
+  }
+}
+.golf-form-page {
+  min-height: max(100dvh, 135cqw);
+  padding: clamp(32px, 5cqw, 55px) 20px 0;
+  background: linear-gradient(180deg, #0825c5 0%, #1475ef 47%, #1688f3 76%, #1479e8 100%);
+  text-align: center;
+}
+.golf-form-page .form-subtitle {
+  margin: 0 auto clamp(25px, 3cqw, 38px);
+  font-size: clamp(18px, 2.6cqw, 28px);
+  line-height: 1.15;
+}
+.golf-form-page .form-subtitle em {
+  margin-top: 4px;
+  font-size: 0.85em;
+  font-style: normal;
+}
+.golf-form-page #golf-form {
+  display: block;
+  grid-template-columns: none;
+  width: min(68%, 620px);
+  max-width: 620px;
+  margin: 0 auto;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}
+.golf-form-page .registration-form label,
+.golf-form-page .select-field {
+  display: block;
+  margin: 0 0 clamp(16px, 2.2cqw, 25px);
+  font-size: clamp(13px, 1.55cqw, 17px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+.golf-form-page .registration-form input,
+.golf-form-page .select-trigger,
+.golf-form-page .registration-form textarea {
+  min-height: 40px;
+  margin-top: 7px;
+  font-size: clamp(13px, 1.65cqw, 17px);
+  font-weight: 400;
+}
+.golf-form-page .registration-form textarea {
+  min-height: 102px;
+  resize: none;
+}
+.golf-form-page .confirm-button {
+  width: 100%;
+  max-width: none;
+  min-height: 40px;
+  margin: clamp(29px, 4cqw, 48px) auto 0;
+  font-size: clamp(12px, 1.5cqw, 16px);
+}
+.golf-form-page .privacy-note {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.golf-form-page .landscape {
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: clamp(270px, 37cqw, 500px);
+  margin: 0;
+  object-fit: cover;
+  object-position: center bottom;
+  mask-image: linear-gradient(transparent 0%, #000 27%);
+}
+@media (max-width: 599px) {
+  .golf-form-page #golf-form {
+    width: calc(100% - 20px);
+  }
+  .golf-form-page .landscape {
+    height: 34cqw;
+    min-height: 240px;
+  }
+}
+.golf-form-page {
+  min-height: 0;
+  padding-bottom: 0;
+  background: linear-gradient(180deg, #0825c5 0%, #1475ef 40%, #1688f3 100%);
+}
+.golf-form-page #golf-form {
+  z-index: 2;
+}
+.golf-form-page .landscape {
+  position: relative;
+  z-index: 1;
+  left: auto;
+  bottom: auto;
+  display: block;
+  width: calc(100% + 40px);
+  max-width: none;
+  height: clamp(290px, 48cqw, 430px);
+  max-height: none;
+  margin: -65px -20px 0;
+  object-fit: cover;
+  object-position: center bottom;
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 24%);
+}
+@media (max-width: 599px) {
+  .golf-form-page .landscape {
+    height: clamp(270px, 76cqw, 390px);
+    margin-top: -52px;
+    min-height: 0;
+  }
+}
+.golf-form-page .form-subtitle em {
+  margin-top: 7px;
+}
+@media (max-width: 599px) {
+  .golf-form-page .confirm-button {
+    min-height: 50px;
+    font-size: 14px;
+  }
+  .golf-form-page .confirm-button {
+    min-height: 46px;
+    padding: 8px 6px;
+    font-size: clamp(10px, 2.8cqw, 12px);
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+  }
+}

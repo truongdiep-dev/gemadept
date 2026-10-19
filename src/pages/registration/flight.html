@@ -1,0 +1,70 @@
+<section
+  class="page form-page flight-page party-form-page"
+  data-page="dang-ky-tiec/2"
+  hidden
+  aria-labelledby="flight-title"
+>
+  <!-- include: components/brand-pair.html {"className":"party-form-branding","anniversaryAlt":"36 năm Gemadept"} -->
+
+  <h1 id="flight-title" class="form-subtitle">
+    <strong>THÔNG TIN ĐẶT VÉ MÁY BAY</strong>
+    <em lang="en">Flight booking information</em>
+  </h1>
+  <form id="flight-form" class="registration-form" data-step="flight">
+    <p class="form-hint travel-hint">
+      Nếu không cần hỗ trợ vé máy bay, bạn có thể để trống và tiếp tục.
+    </p>
+    <fieldset>
+      <legend>THÔNG TIN VÉ ĐI<em lang="en">Departure ticket information</em></legend>
+      <label
+        >Ngày đi / <span lang="en">Departure date</span>
+        <input type="date" name="departureDate" min="2026-01-01" max="2027-12-31" />
+      </label>
+      <label
+        >Giờ đi / <span lang="en">Departure time</span>
+        <select name="departureTime" data-time-slots>
+          <option value="">Chọn khoảng giờ / Select time slot</option>
+        </select>
+      </label>
+      <label
+        >Sân bay đi / <span lang="en">Departure airport</span>
+        <input
+          name="departureAirport"
+          placeholder="Sân bay đi / Departure airport"
+          maxlength="120"
+        />
+      </label>
+      <label
+        >Xác nhận tham dự / <span lang="en">Attendance confirmation</span>
+        <select name="flightAttendance">
+          <option value="undecided">Chưa xác định / Undecided</option>
+          <option value="yes">Xác nhận tham dự / Attending</option>
+          <option value="no">Xác nhận không tham dự / Not attending</option>
+        </select>
+      </label>
+    </fieldset>
+    <fieldset>
+      <legend>THÔNG TIN VÉ VỀ<em lang="en">Return ticket information</em></legend>
+      <label
+        >Ngày về / <span lang="en">Return date</span>
+        <input type="date" name="returnDate" min="2026-01-01" max="2027-12-31" />
+      </label>
+      <label
+        >Giờ về / <span lang="en">Return departure time</span>
+        <select name="returnTime" data-time-slots>
+          <option value="">Chọn khoảng giờ / Select time slot</option>
+        </select>
+      </label>
+      <label
+        >Sân bay đến / <span lang="en">Arrival airport</span>
+        <input name="returnAirport" placeholder="Sân bay đến / Arrival airport" maxlength="120" />
+      </label>
+    </fieldset>
+    <div class="form-actions">
+      <button class="next-button" type="submit">
+        TIẾP THEO / <span lang="en">NEXT</span>
+        <span aria-hidden="true">›</span>
+      </button>
+    </div>
+  </form>
+</section>

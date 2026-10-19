@@ -1,0 +1,74 @@
+.brand {
+  width: 22%;
+  min-width: 120px;
+  margin: 38px auto 24px;
+}
+.ocean-page {
+  background: linear-gradient(180deg, #071fc3, #0d76f5 35%, #0d76f5 100%);
+  padding-bottom: 36cqw;
+}
+.ocean-page:after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 48cqw;
+  background: url('assets/images/home-sea-2026.webp') center bottom/100% auto no-repeat;
+  mask-image: linear-gradient(transparent, #000 24%);
+}
+.ocean-page > * {
+  position: relative;
+  z-index: 1;
+}
+.form-page .brand {
+  margin-bottom: 30px;
+}
+@media (max-width: 480px) {
+  .brand {
+    margin-top: 49px;
+  }
+  .ocean-page {
+    padding-bottom: 42cqw;
+  }
+}
+@media (min-width: 1100px) {
+  .page-intro {
+    position: sticky;
+    top: 24px;
+    grid-column: 1;
+    min-height: 100dvh;
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: clamp(120px, 12vh, 190px);
+    isolation: isolate;
+  }
+  .page-intro:after {
+    display: none;
+  }
+  .page-intro .brand {
+    width: clamp(190px, 18vw, 275px);
+    min-width: 0;
+    margin: 0 auto 25px;
+  }
+  .page-intro .art-title {
+    width: 100%;
+    text-align: center;
+  }
+  .page-intro .art-title img {
+    width: clamp(205px, 22vw, 320px);
+    min-width: 0;
+  }
+  .form-page .brand {
+    width: 190px;
+    margin: 0 auto 24px;
+  }
+}
+.ocean-map-art svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

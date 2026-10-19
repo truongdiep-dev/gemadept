@@ -1,0 +1,70 @@
+<section
+  class="page form-page party-form-page guest-page"
+  data-page="dang-ky-tiec/1"
+  hidden
+  aria-labelledby="guest-title"
+>
+  <!-- include: components/brand-pair.html {"className":"party-form-branding","anniversaryAlt":"36 năm Gemadept"} -->
+
+  <h1 id="guest-title" class="form-main-title attendance-image-title">
+    <img
+      src="/assets/images/title-attendance-confirmation-2026-clean.png"
+      alt="XÁC NHẬN THAM GIA"
+    />
+  </h1>
+  <p class="form-main-english" lang="en">Attendance confirmation</p>
+  <p class="form-subtitle">
+    <strong>THÔNG TIN KHÁCH MỜI</strong>
+    <em lang="en">Guest information</em>
+  </p>
+  <form id="guest-form" class="registration-form" data-step="guest">
+    <label
+      >Công ty / <span lang="en">Company</span>
+      <span class="required">*</span>
+      <input
+        name="company"
+        autocomplete="organization"
+        placeholder="Nhập tên công ty / Enter company name"
+        required
+        maxlength="160"
+      />
+    </label>
+    <label
+      >Họ &amp; tên Khách mời / <span lang="en">Guest name</span>
+      <span class="required">*</span>
+      <input
+        name="name"
+        autocomplete="name"
+        placeholder="Nhập tên của bạn / Enter your name"
+        required
+        maxlength="120"
+      />
+    </label>
+    <label
+      >Chức vụ Khách mời / <span lang="en">Guest position</span>
+      <span class="required">*</span>
+      <input
+        name="position"
+        autocomplete="organization-title"
+        placeholder="Nhập chức vụ / Enter your position"
+        required
+        maxlength="120"
+      />
+    </label>
+    <label
+      >Xác nhận tham dự / <span lang="en">Attendance confirmation</span>
+      <select name="attendance">
+        <option value="undecided">Chưa xác định / Undecided</option>
+        <option value="yes">Xác nhận tham dự / Attending</option>
+        <option value="no">Xác nhận không tham dự / Not attending</option>
+      </select>
+    </label>
+    <p class="form-hint">Các mục có dấu * là bắt buộc.</p>
+    <div class="form-actions">
+      <button class="next-button" type="submit">
+        TIẾP THEO / <span lang="en">NEXT</span>
+        <span aria-hidden="true">›</span>
+      </button>
+    </div>
+  </form>
+</section>

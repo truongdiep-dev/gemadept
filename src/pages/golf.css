@@ -1,0 +1,211 @@
+.golf-page .section-cta {
+  margin-top: 42px;
+}
+@media (min-width: 1100px) {
+  .golf-page {
+    min-height: max(760px, 100dvh);
+    padding: 0 0 80px;
+    background: #0e75f4;
+    text-align: center;
+  }
+  .golf-page:before {
+    content: none;
+  }
+  .golf-page .golf-header {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    border-radius: 0;
+    margin: 0 auto;
+  }
+  .golf-page .golf-title {
+    font-size: clamp(48px, 4.3vw, 68px);
+    line-height: 1.05;
+    margin: clamp(28px, 4vh, 50px) auto 0;
+    text-align: center;
+  }
+  .golf-page .section-cta {
+    margin: 40px auto 0;
+  }
+}
+@media (max-width: 1099px) {
+  .golf-page .golf-header {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 0;
+    margin: 0 auto;
+  }
+}
+.golf-page .golf-header {
+  clip-path: ellipse(51% 100% at 50% 0);
+  background: #0e75f4;
+}
+.golf-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: max(100dvh, 135cqw);
+  padding: clamp(52px, 7cqw, 82px) 20px 80px;
+  background: linear-gradient(
+    180deg,
+    #0825c5 0%,
+    #0c48d7 25%,
+    #117af5 49%,
+    #117af5 69%,
+    #0825c5 100%
+  );
+  text-align: center;
+}
+.golf-page::before {
+  content: none;
+}
+.golf-page .golf-branding {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(14px, 3cqw, 38px);
+  width: 100%;
+  margin: 0 auto clamp(65px, 10cqw, 120px);
+}
+.golf-page .golf-branding img:first-child {
+  width: clamp(100px, 14cqw, 180px);
+}
+.golf-page .golf-branding img:last-child {
+  width: clamp(130px, 19cqw, 230px);
+}
+.golf-page .golf-title {
+  width: 100%;
+  margin: 0 auto;
+  font-size: clamp(33px, 5.4cqw, 64px);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: 0;
+  color: #fff;
+  text-shadow:
+    0 5px 0 #063abc,
+    0 1px 2px #fff9;
+}
+.golf-page .section-cta {
+  margin: clamp(36px, 5cqw, 56px) auto 0;
+}
+.golf-page .section-cta small {
+  white-space: nowrap;
+}
+@media (max-width: 480px) {
+  .golf-page .golf-title {
+    font-size: clamp(29px, 6cqw, 38px);
+  }
+}
+.golf-page .golf-title a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+.golf-page .golf-title a:hover,
+.golf-page .golf-title a:focus-visible {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
+}
+.golf-page .golf-title {
+  text-shadow: none;
+}
+.golf-page .golf-title a {
+  color: transparent;
+  background-image:
+    radial-gradient(ellipse at 58% 62%, #b6bec9 0 14%, #e9edf0 34%, transparent 58%),
+    linear-gradient(#fff, #f4f7fa);
+  background-size:
+    14px 12px,
+    100% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-shadow: none;
+  filter: drop-shadow(0 4px 0 #0739b3);
+}
+.golf-page .section-cta {
+  padding: 9px 18px;
+}
+.golf-page .section-cta strong {
+  font-family: GothamContact, Gotham, Arial, sans-serif;
+  font-weight: 400;
+}
+@media (max-width: 599px) {
+  .golf-page .golf-title {
+    line-height: 1.15;
+    text-wrap: normal;
+  }
+  .golf-page .golf-title a {
+    padding: 0.2em 0 0.1em;
+    color: #fff;
+    -webkit-text-fill-color: #fff;
+    background: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    filter: none;
+    text-shadow:
+      0 4px 0 #0739b3,
+      0 1px 2px #fff9;
+  }
+}
+@media (hover: none) and (pointer: coarse) and (min-width: 600px) {
+  .golf-page .golf-title {
+    line-height: 1.15;
+    text-wrap: normal;
+  }
+  .golf-page .golf-title a {
+    color: #fff;
+    -webkit-text-fill-color: #fff;
+    background: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    filter: none;
+    text-shadow:
+      0 4px 0 #0739b3,
+      0 1px 2px #fff9;
+  }
+}
+@media (min-width: 1100px) {
+  .golf-page {
+    height: 100dvh;
+    min-height: 0;
+    padding: clamp(35px, 5dvh, 80px) 20px 40px;
+    justify-content: flex-start;
+  }
+  .golf-page .golf-branding {
+    margin-bottom: clamp(25px, 3dvh, 45px);
+  }
+  .golf-page .golf-branding img:first-child {
+    width: clamp(100px, 14vw, 180px);
+  }
+  .golf-page .golf-branding img:last-child {
+    width: clamp(130px, 19vw, 230px);
+  }
+  .golf-page .golf-title {
+    font-size: clamp(48px, 5.5vw, 72px);
+    line-height: 1.07;
+  }
+  .golf-page .section-cta {
+    margin-top: clamp(36px, 4dvh, 56px);
+  }
+}
+.golf-page .golf-title,
+.golf-page .golf-title a {
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+  background: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  filter: none;
+  text-shadow: none;
+}
+.golf-page .golf-title a {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+}
