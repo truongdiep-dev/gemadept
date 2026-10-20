@@ -81,6 +81,7 @@ export async function build() {
   await writeFile(path.join(output, 'styles.css'), css);
   await copyModules();
   await cp(path.join(root, 'assets'), path.join(output, 'assets'), { recursive: true });
+  await cp(path.join(root, 'favicon.ico'), path.join(output, 'favicon.ico'));
   console.log('Built pages, components, modules and assets into dist/.');
 }
 
