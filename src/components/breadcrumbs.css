@@ -1,0 +1,67 @@
+.breadcrumbs {
+  position: relative;
+  z-index: 2;
+  width: min(1120px, 100%);
+  margin: 16px auto 0;
+  color: #fff;
+  font-size: clamp(11px, 1.15cqw, 14px);
+  line-height: 1.4;
+  text-align: center;
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4px 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.breadcrumbs li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  content: '/';
+  color: #ffffffa6;
+}
+
+.breadcrumbs a {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: #ffffffa6;
+  text-underline-offset: 3px;
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus-visible {
+  color: #ffe18a;
+  text-decoration-color: currentColor;
+}
+
+.breadcrumbs [aria-current='page'] {
+  color: #ffe18a;
+  font-weight: 700;
+}
+
+.golf-program-page > .breadcrumbs {
+  margin-top: clamp(10px, 2vw, 24px);
+  margin-bottom: clamp(24px, 3cqw, 48px);
+}
+
+@media (max-width: 599px) {
+  .breadcrumbs {
+    width: calc(100% - 10%);
+    margin-top: 12px;
+    font-size: 10px;
+  }
+  .breadcrumbs ol,
+  .breadcrumbs li {
+    gap: 3px 6px;
+  }
+}

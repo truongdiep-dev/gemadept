@@ -6,29 +6,27 @@
   position: relative;
   width: 100%;
 }
-.golf-program-hero > .site-nav {
+.golf-program-hero > .site-header {
   position: absolute;
   top: clamp(12px, 2.5vw, 40px);
-  left: 50%;
-  width: min(calc(100% - 32px), 1120px);
+  left: 0;
+  width: 100%;
   margin: 0;
   padding: 0;
-  transform: translateX(-50%);
 }
 @media (max-width: 599px) {
   .golf-program-hero {
     display: flex;
     flex-direction: column;
   }
-  .golf-program-hero > .site-nav {
+  .golf-program-hero > .site-header {
     position: relative;
     order: -1;
     top: auto;
     left: auto;
     width: 100%;
     margin: 0 0 clamp(28px, 6cqw, 38px);
-    padding: 14px 5% 0;
-    transform: none;
+    padding: 14px 0 0;
   }
   .golf-program-hero > .golf-header {
     -webkit-mask-image: linear-gradient(to bottom, transparent, #000 18%);

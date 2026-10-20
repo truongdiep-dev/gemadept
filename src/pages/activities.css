@@ -468,7 +468,7 @@
   .activities-page .thanks {
     grid-column: 1/-1;
   }
-  .activities-page > .site-nav {
+  .activities-page > .site-header {
     grid-column: 1/-1;
     justify-self: center;
   }

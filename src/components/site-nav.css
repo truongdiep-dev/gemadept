@@ -1,13 +1,20 @@
+.site-header {
+  position: relative;
+  width: 100%;
+}
 .site-nav {
   position: relative;
   z-index: 2;
   margin-inline: auto;
 }
-.page:not(.home-page) > .site-nav {
+.page:not(.home-page) > .site-header {
   margin-bottom: clamp(24px, 3cqw, 48px);
 }
 @media (min-width: 1100px) {
-  .page.activities-page > .site-nav {
+  .site-nav {
+    width: min(100%, 1120px);
+  }
+  .page.activities-page > .site-header {
     margin-bottom: clamp(8px, 1dvh, 12px);
   }
 }
