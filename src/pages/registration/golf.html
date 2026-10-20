@@ -4,6 +4,7 @@
   hidden
   aria-labelledby="golf-form-title"
 >
+  <!-- include: components/site-nav.html -->
   <!-- include: components/brand-pair.html {"className":"golf-form-branding","anniversaryAlt":"36 năm Gemadept"} -->
 
   <h1 id="golf-form-title" class="form-subtitle">
@@ -35,12 +36,11 @@
     </label>
     <label
       >Chức vụ Khách mời / <span lang="en">Guest position</span>
-      <span class="required">*</span>
+      <span class="optional">(Tùy chọn / <span lang="en">Optional</span>)</span>
       <input
         name="position"
         autocomplete="organization-title"
         placeholder="Nhập chức vụ / Enter your position"
-        required
         maxlength="120"
       />
     </label>

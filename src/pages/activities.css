@@ -454,26 +454,30 @@
   .activities-page {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 520px));
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(5, auto);
     column-gap: clamp(28px, 4vw, 70px);
     row-gap: clamp(8px, 1dvh, 14px);
     justify-content: center;
     align-content: space-between;
     height: auto;
     min-height: 100dvh;
-    padding: clamp(10px, 2dvh, 22px) 40px;
+    padding: clamp(10px, 2dvh, 22px) 40px 6px;
   }
   .activities-page .activities-branding,
   .activities-page h1,
   .activities-page .thanks {
     grid-column: 1/-1;
   }
+  .activities-page > .site-nav {
+    grid-column: 1/-1;
+    justify-self: center;
+  }
   .activities-page .activities-branding {
     margin-bottom: clamp(4px, 1dvh, 10px);
   }
   .activities-page .activities-branding img {
     width: auto;
-    height: clamp(60px, 11dvh, 110px);
+    height: clamp(60px, 10dvh, 100px);
     object-fit: contain;
   }
   .activities-page h1 {
@@ -505,7 +509,7 @@
   }
   .activities-page .activity > img {
     width: min(90%, 500px);
-    height: min(26dvh, 260px);
+    height: min(23dvh, 230px);
     margin-bottom: clamp(3px, 0.7dvh, 8px);
   }
   .activities-page .activity > strong {
@@ -516,7 +520,7 @@
     margin-top: clamp(5px, 1dvh, 10px);
   }
   .activities-page .thanks {
-    width: min(46vw, 55dvh, 520px);
+    width: min(46vw, 48dvh, 500px);
     margin: clamp(6px, 1dvh, 12px) auto 0;
   }
   .activities-page .activities-branding {
@@ -537,5 +541,10 @@
   }
   .activities-page .activities-branding img:last-child {
     width: min(100%, 260px);
+  }
+}
+@media (max-width: 1099px) {
+  .activities-page {
+    padding-top: 1px;
   }
 }

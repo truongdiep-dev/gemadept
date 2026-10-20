@@ -38,8 +38,8 @@ export function validateRegistration(input) {
       throw new ValidationError('Thông tin quá dài hoặc chứa ký tự không hợp lệ.');
     result[key] = value;
   }
-  for (const key of ['company', 'name', 'position'])
-    if (!result[key]) throw new ValidationError('Vui lòng nhập đủ công ty, họ tên và chức vụ.');
+  for (const key of ['company', 'name'])
+    if (!result[key]) throw new ValidationError('Vui lòng nhập đủ công ty và họ tên.');
   if (!allowedStatus.has(result.attendance))
     throw new ValidationError('Xác nhận tham dự không hợp lệ.');
   if (input.event === 'golf') {

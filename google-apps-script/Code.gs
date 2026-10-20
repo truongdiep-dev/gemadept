@@ -46,7 +46,7 @@ function date_(value) {return value ? new Date(value+'T00:00:00+07:00') : '';}
 function validate_(record) {
   if (!record || !['party','golf'].includes(record.event)) throw new Error('Invalid event');
   if (!/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(record.requestId || '')) throw new Error('Invalid request id');
-  ['company','name','position'].forEach(function(key) {if(typeof record[key] !== 'string' || !record[key].trim() || record[key].length>160)throw new Error('Invalid guest information');});
+  ['company','name'].forEach(function(key) {if(typeof record[key] !== 'string' || !record[key].trim() || record[key].length>160)throw new Error('Invalid guest information');});
   if (!Object.prototype.hasOwnProperty.call(STATUS_LABELS,record.attendance)) throw new Error('Invalid attendance');
   Object.keys(record).forEach(function(key){if(typeof record[key] !== 'string' || record[key].length>500)throw new Error('Invalid field');});
   if(record.event==='party') {

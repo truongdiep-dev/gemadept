@@ -2,6 +2,39 @@
   width: 100%;
   margin-top: -1px;
 }
+.golf-program-hero {
+  position: relative;
+  width: 100%;
+}
+.golf-program-hero > .site-nav {
+  position: absolute;
+  top: clamp(12px, 2.5vw, 40px);
+  left: 50%;
+  width: min(calc(100% - 32px), 1120px);
+  margin: 0;
+  padding: 0;
+  transform: translateX(-50%);
+}
+@media (max-width: 599px) {
+  .golf-program-hero {
+    display: flex;
+    flex-direction: column;
+  }
+  .golf-program-hero > .site-nav {
+    position: relative;
+    order: -1;
+    top: auto;
+    left: auto;
+    width: 100%;
+    margin: 0 0 clamp(28px, 6cqw, 38px);
+    padding: 14px 5% 0;
+    transform: none;
+  }
+  .golf-program-hero > .golf-header {
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #000 18%);
+    mask-image: linear-gradient(to bottom, transparent, #000 18%);
+  }
+}
 .golf-program-page {
   padding-bottom: 0;
   background: #0e75f4;

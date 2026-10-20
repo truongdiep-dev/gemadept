@@ -23,5 +23,5 @@ export function setReceipt(value) {
   } catch {}
 }
 export function validGuest() {
-  return ['company', 'name', 'position'].every((key) => draft.guest?.[key]?.trim());
+  return ['company', 'name'].every((key) => draft.guest?.[key]?.trim());
 }

@@ -22,6 +22,16 @@ function route(shouldFocus = false) {
   if (location.pathname !== pagePaths[target] || location.hash)
     history.replaceState(null, '', `${pagePaths[target]}${location.search}`);
   for (const page of pages) page.hidden = page.dataset.page !== target;
+  const activeNav =
+    target === 'thu-ngo' || target === 'lich-trinh'
+      ? target
+      : target === 'trang-chu'
+        ? null
+        : 'su-kien';
+  for (const link of document.querySelectorAll('.site-nav [data-nav-target]')) {
+    if (link.dataset.navTarget === activeNav) link.setAttribute('aria-current', 'page');
+    else link.removeAttribute('aria-current');
+  }
   if (target === 'lich-trinh' || target === 'thu-ngo') requestAnimationFrame(positionAgendaMap);
   document.title = `${titles[target]} | Gemadept`;
   window.scrollTo(0, 0);
