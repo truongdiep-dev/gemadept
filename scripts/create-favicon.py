@@ -11,6 +11,7 @@ globe = logo.crop((0, 0, logo.width, 145))
 globe = globe.crop(globe.getchannel("A").getbbox())
 
 canvas = Image.new("RGBA", (256, 256), (0, 0, 0, 0))
-globe.thumbnail((240, 240), Image.Resampling.LANCZOS)
+# A favicon is square. Give the wide globe enough height to remain visible at 16 px.
+globe = globe.resize((240, 216), Image.Resampling.LANCZOS)
 canvas.alpha_composite(globe, ((256 - globe.width) // 2, (256 - globe.height) // 2))
 canvas.save(root / "favicon.ico", format="ICO", sizes=[(16, 16), (32, 32), (48, 48), (64, 64), (128, 128), (256, 256)])
