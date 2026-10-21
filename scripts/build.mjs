@@ -25,7 +25,7 @@ const escapeAttribute = (value) =>
       })[char],
   );
 
-async function renderTemplate(relative, props = {}, ancestors = []) {
+export async function renderTemplate(relative, props = {}, ancestors = []) {
   if (ancestors.includes(relative)) throw new Error(`Circular template: ${relative}`);
   let text = await readFile(inside(source, relative), 'utf8');
   const includes = [
@@ -47,7 +47,7 @@ async function renderTemplate(relative, props = {}, ancestors = []) {
   return text;
 }
 
-async function bundleStyles() {
+export async function bundleStyles() {
   const entry = await readFile(path.join(source, 'styles/index.css'), 'utf8');
   const chunks = [];
   for (const match of entry.matchAll(/@import ['"]([^'"]+)['"];?/g)) {

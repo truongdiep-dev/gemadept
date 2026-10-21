@@ -171,3 +171,32 @@
     width: 84%;
   }
 }
+@media (min-width: 1100px) {
+  .success-page {
+    min-height: 100dvh;
+    padding-bottom: clamp(24px, 4dvh, 48px);
+  }
+  .success-page > * {
+    flex-shrink: 0;
+  }
+  .page.success-page:not(.home-page) > .site-header {
+    margin-bottom: clamp(12px, 2dvh, 24px);
+  }
+  .success-page .success-brands {
+    margin-bottom: clamp(12px, 2dvh, 24px);
+  }
+  .success-page .success-brands img {
+    max-height: 12dvh;
+    object-fit: contain;
+  }
+  .success-page .registration-success-title-image {
+    width: auto;
+    max-height: 18dvh;
+  }
+  .success-page .success-copy {
+    margin-top: clamp(12px, 2dvh, 24px);
+  }
+  .success-page .section-cta {
+    margin-top: clamp(12px, 2dvh, 24px);
+  }
+}

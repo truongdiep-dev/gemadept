@@ -60,7 +60,7 @@ export default async function handler(req, res) {
     if (!saved) throw new Error('Registration was not acknowledged');
     return reply(res, 200, { ok: true, id: saved.id });
   } catch (error) {
-    console.error('Registration storage error:', error.name);
+    console.error('Registration storage error:', error.name, error.message, error.cause?.code || '');
     return reply(res, 503, {
       ok: false,
       message: 'Chưa xác nhận được việc lưu đăng ký. Vui lòng thử gửi lại sau ít phút.',

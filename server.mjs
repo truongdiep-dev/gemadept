@@ -6,6 +6,7 @@ const ROOT = path.dirname(fileURLToPath(import.meta.url));
 import { ValidationError, validateRegistration } from './server/validation.mjs';
 import { createBatchWriter } from './server/batch-writer.mjs';
 import { googleTransport } from './server/google-sheets.mjs';
+import { build, renderTemplate, bundleStyles } from './scripts/build.mjs';
 async function readEnv() {
   try {
     const text = await readFile(path.join(ROOT, '.env'), 'utf8');
@@ -37,7 +38,7 @@ async function readBody(req) {
     throw new ValidationError('Dữ liệu gửi không hợp lệ.');
   }
 }
-export function createApp({ writeRegistration, publicOrigin = '' } = {}) {
+export function createApp({ writeRegistration, publicOrigin = '', development = false } = {}) {
   return http.createServer(async (req, res) => {
     res.setHeader('X-Content-Type-Options', 'nosniff');
     res.setHeader('Referrer-Policy', 'same-origin');
@@ -79,7 +80,7 @@ export function createApp({ writeRegistration, publicOrigin = '' } = {}) {
         try {
           json(res, 200, await writeRegistration(record));
         } catch (err) {
-          console.error('Registration storage error:', err.name);
+          console.error('Registration storage error:', err.name, err.message, err.cause?.code || '');
           json(res, 503, {
             ok: false,
             message: 'Chưa xác nhận được việc lưu đăng ký. Vui lòng thử gửi lại sau ít phút.',
@@ -110,8 +111,12 @@ export function createApp({ writeRegistration, publicOrigin = '' } = {}) {
         res.end('Not found');
         return;
       }
-      const file = path.join(ROOT, 'dist', resource);
-      const data = await readFile(file);
+      const file = development ? path.join(ROOT, resource) : path.join(ROOT, 'dist', resource);
+      const data = development && resource === '/index.html'
+        ? Buffer.from(await renderTemplate('index.html'))
+        : development && resource === '/styles.css'
+          ? Buffer.from(await bundleStyles())
+          : await readFile(file);
       const ext = path.extname(file);
       res.writeHead(200, {
         'Content-Type': {
@@ -140,8 +145,8 @@ export function createApp({ writeRegistration, publicOrigin = '' } = {}) {
   });
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  const { build } = await import('./scripts/build.mjs');
-  await build();
+  const development = process.argv.includes('--dev');
+  if (!development) await build();
   await readEnv();
   const configured =
     /^https:\/\/script\.google\.com\/macros\/s\/[a-zA-Z0-9_-]+\/exec$/.test(
@@ -150,6 +155,7 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
   const server = createApp({
     writeRegistration: configured ? createBatchWriter(googleTransport) : undefined,
     publicOrigin: process.env.PUBLIC_ORIGIN || '',
+    development,
   });
   const port = Number(process.env.PORT || 3000),
     host = process.env.HOST || '127.0.0.1';
